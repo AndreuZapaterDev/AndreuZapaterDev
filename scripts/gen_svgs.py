@@ -264,7 +264,7 @@ STACK = [
                   ("react", "React", "#61DAFB"), ("tailwindcss", "Tailwind CSS", "#06B6D4"),
                   ("angular", "Angular", "#DD0031")]),
     ("BACKEND", [("php", "PHP", "#8892BF"), ("laravel", "Laravel", "#FF2D20"),
-                 ("openjdk", "Java", "#ED8B00")]),
+                 ("openjdk", "Java", "#ED8B00"), ("supabase", "Supabase", "#3FCF8E")]),
     ("DATA", [("mysql", "MySQL", "#5D9CC9"), ("postgresql", "PostgreSQL", "#6B8FE8"),
               ("oracle", "Oracle", "#F80000")]),
     ("DEVOPS", [("git", "Git", "#F05032"), ("github", "GitHub", "#ffffff"),
@@ -276,9 +276,10 @@ def stack_svg(titles, basic_label):
     color = "#4ade80"
     gap, ph = 12, 126
     # Fila 1: Frontend a todo el ancho · Fila 2: Backend, Datos y DevOps en 3 columnas
-    col_w = (1200 - 2 * gap) / 3
+    # Fila 1: Frontend · Fila 2: Backend y Datos · Fila 3: DevOps
+    col_w = (1200 - gap) / 2
     layout = [(0, 0, 1200), (0, ph + gap, col_w), (col_w + gap, ph + gap, col_w),
-              (2 * (col_w + gap), ph + gap, col_w)]
+              (0, 2 * (ph + gap), 1200)]
     out = []
     for (key, items), (px, py, pw) in zip(STACK, layout):
         out.append(
@@ -298,9 +299,9 @@ def stack_svg(titles, basic_label):
                 + '</text>'
             )
             cx += w + 8
-    h = 2 * ph + gap
+    h = 3 * ph + 2 * gap
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{h}" viewBox="0 0 1200 {h}" role="img" '
-            f'aria-label="Stack: HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Angular, PHP, Laravel, Java, MySQL, PostgreSQL, Oracle SQL, Git, GitHub, Docker">'
+            f'aria-label="Stack: HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Angular, PHP, Laravel, Java, Supabase, MySQL, PostgreSQL, Oracle SQL, Git, GitHub, Docker">'
             + "".join(out) + '</svg>\n')
 
 
@@ -517,7 +518,7 @@ write("about-es.svg", about_svg(
      ["Lidero el **Departamento Digital de OK24Horas** (Grupo RODI),",
       "combinando desarrollo técnico, gestión de proyectos",
       "y estrategia digital."]],
-    [("3", "años de experiencia"), ("16", "tecnologías"), ("3", "idiomas")],
+    [("3", "años de experiencia"), ("17", "tecnologías"), ("3", "idiomas")],
     code_lines("producto web de extremo a extremo"),
     "AHORA MISMO",
     "Migrando una aplicación web de **ASP.NET** a **React + Laravel** en OK24Horas",
@@ -531,7 +532,7 @@ write("about-en.svg", about_svg(
      ["I lead the **Digital Department at OK24Horas** (Grupo RODI),",
       "combining hands-on development, project management",
       "and digital strategy."]],
-    [("3", "years of experience"), ("16", "technologies"), ("3", "languages")],
+    [("3", "years of experience"), ("17", "technologies"), ("3", "languages")],
     code_lines("end-to-end web products"),
     "CURRENTLY",
     "Migrating a web application from **ASP.NET** to **React + Laravel** at OK24Horas",
@@ -545,7 +546,9 @@ CHECK = '<path d="M20 6 9 17l-5-5"/>'
 
 def project_svg(status, kind, title, subtitle, desc_lines, stack_label, stack, feat_label, features, label):
     color = "#22c55e"
-    H = 280
+    # Alto según el número de filas de funcionalidades (4 filas caben en 280 px)
+    rows_needed = (len(features) + 1) // 2 if len(features) > 3 else len(features)
+    H = 280 + max(0, rows_needed - 4) * 28
     out = [
         f'<rect x=".5" y=".5" width="1199" height="{H - 1}" rx="18" fill="{BG}" stroke="{color}" stroke-opacity=".3"/>',
         f'<rect x=".5" y=".5" width="1199" height="{H - 1}" rx="18" fill="url(#pg)"/>',
@@ -581,13 +584,16 @@ def project_svg(status, kind, title, subtitle, desc_lines, stack_label, stack, f
             f'<text x="{cx + 44:.0f}" y="91" font-family="{SANS}" font-size="15" font-weight="600" fill="#f5f5f5">{escape(name)}</text>')
         cx += w + 8
     out.append(f'<text x="{px}" y="144" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="2" fill="{color}">{escape(feat_label)}</text>')
-    fy = 176
-    for f in features:
+    two_cols = len(features) > 3
+    rows = (len(features) + 1) // 2 if two_cols else len(features)
+    step = 28 if two_cols else 30
+    for i, f in enumerate(features):
+        fx = px + (200 if two_cols and i >= rows else 0)
+        fy = 174 + (i % rows) * step
         out.append(
-            f'<circle cx="{px + 10}" cy="{fy - 5}" r="10" fill="{color}" fill-opacity=".15"/>'
-            f'<g transform="translate({px + 3} {fy - 12}) scale(.5833)" fill="none" stroke="{color}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">{CHECK}</g>'
-            f'<text x="{px + 30}" y="{fy}" font-family="{SANS}" font-size="15" fill="#e5e5e5">{escape(f)}</text>')
-        fy += 30
+            f'<circle cx="{fx + 10}" cy="{fy - 5}" r="10" fill="{color}" fill-opacity=".15"/>'
+            f'<g transform="translate({fx + 3} {fy - 12}) scale(.5833)" fill="none" stroke="{color}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">{CHECK}</g>'
+            f'<text x="{fx + 30}" y="{fy}" font-family="{SANS}" font-size="15" fill="#e5e5e5">{escape(f)}</text>')
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{H}" viewBox="0 0 1200 {H}" role="img" aria-label="{escape(label)}">'
             f'<defs><radialGradient id="pg" cx="0" cy="0" r=".8"><stop offset="0" stop-color="{color}" stop-opacity=".12"/>'
             f'<stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient></defs>'
@@ -616,6 +622,30 @@ write("project-xixauxas-en.svg", project_svg(
     "Xixauxas: live personal project built with React. Web platform for a League of Legends streamer and coach "
     "to manage and promote coaching sessions. Coaching booking, bilingual ES/EN site, videos and social media."))
 
+
+ZENSU_STACK = [("react", "React", "#61DAFB"), ("supabase", "Supabase", "#3FCF8E")]
+
+write("project-zensu-es.svg", project_svg(
+    "EN PRODUCCIÓN", "PROYECTO PERSONAL", "Zensu", "Gestión de tareas inteligente",
+    ["Gestor de tareas con **React** en el frontend y **Supabase**",
+     "como backend: **autenticación, base de datos y seguridad**",
+     "a nivel de fila (RLS)."],
+    "STACK", ZENSU_STACK, "FUNCIONALIDADES",
+    ["Prioridades", "Etiquetas", "Fechas límite", "Arrastrar y soltar", "Calendario y reuniones",
+     "Método Pomodoro", "Estadísticas", "Auth + RLS (Supabase)", "Bilingüe ES / EN", "Tema claro / oscuro"],
+    "Zensu: gestor de tareas en producción desarrollado con React y Supabase. Prioridades, etiquetas, fechas límite, "
+    "arrastrar y soltar, calendario para tareas y reuniones, método Pomodoro, estadísticas, autenticación y Row Level Security, bilingüe ES/EN y tema claro/oscuro."))
+
+write("project-zensu-en.svg", project_svg(
+    "LIVE", "PERSONAL PROJECT", "Zensu", "Smart task management",
+    ["Task manager with a **React** frontend and **Supabase**",
+     "as the backend: **authentication, database and row-level**",
+     "**security** (RLS)."],
+    "STACK", ZENSU_STACK, "FEATURES",
+    ["Priorities", "Tags", "Due dates", "Drag and drop", "Calendar & meetings",
+     "Pomodoro timer", "Statistics", "Auth + RLS (Supabase)", "Bilingual ES / EN", "Light / dark theme"],
+    "Zensu: live task manager built with React and Supabase. Priorities, tags, due dates, drag and drop, calendar for tasks and meetings, Pomodoro timer, statistics, "
+    "authentication and Row Level Security, bilingual ES/EN and light/dark theme."))
 
 # ---------------------------------------------------------------- frase de posicionamiento
 # Fondo transparente: versión clara y oscura (README usa <picture> según el tema de GitHub)
@@ -736,6 +766,12 @@ for cid, (issuer, es, en, linked, icon, level) in CERTS.items():
 ARROW = '<path d="M7 17 17 7M7 7h10v10"/>'
 for lang, txt in (("es", "Visitar xixauxas.es"), ("en", "Visit xixauxas.es")):
     write(f"btn-visit-{lang}.svg", button_svg(
+        txt,
+        lambda c: f'<g fill="none" stroke="{c}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{ARROW}</g>',
+        primary=True, color="#22c55e"))
+
+for lang, txt in (("es", "Visitar zensu.vercel.app"), ("en", "Visit zensu.vercel.app")):
+    write(f"btn-visit-zensu-{lang}.svg", button_svg(
         txt,
         lambda c: f'<g fill="none" stroke="{c}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{ARROW}</g>',
         primary=True, color="#22c55e"))

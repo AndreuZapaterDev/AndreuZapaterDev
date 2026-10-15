@@ -65,7 +65,7 @@
 <img src="assets/sections/es-03.svg" width="100%" alt="03 — Stack tecnológico"/>
 
 <p align="center">
-  <img src="assets/stack-es.svg" width="100%" alt="Stack: HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Angular, PHP, Laravel, Java, MySQL, PostgreSQL, Oracle SQL, Git, GitHub, Docker"/>
+  <img src="assets/stack-es.svg" width="100%" alt="Stack: HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Angular, PHP, Laravel, Java, Supabase, MySQL, PostgreSQL, Oracle SQL, Git, GitHub, Docker"/>
 </p>
 
 <br/>
@@ -83,6 +83,20 @@
 
 <p align="center">
   <a href="https://www.xixauxas.es"><img src="assets/btn-visit-es.svg" height="46" alt="Visitar xixauxas.es"/></a>
+</p>
+
+<br/>
+
+<p align="center">
+  <a href="https://zensu.vercel.app"><img src="assets/zensu-preview.png" width="100%" alt="Captura de la web zensu.vercel.app"/></a>
+</p>
+
+<p align="center">
+  <img src="assets/project-zensu-es.svg" width="100%" alt="Zensu: proyecto personal en producción. Gestor de tareas desarrollado con React y Supabase: prioridades, etiquetas, fechas límite, arrastrar y soltar, calendario para tareas y reuniones, método Pomodoro, estadísticas, autenticación y Row Level Security con Supabase, bilingüe ES/EN y tema claro/oscuro."/>
+</p>
+
+<p align="center">
+  <a href="https://zensu.vercel.app"><img src="assets/btn-visit-zensu-es.svg" height="46" alt="Visitar zensu.vercel.app"/></a>
 </p>
 
 <br/>
