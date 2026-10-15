@@ -161,10 +161,12 @@ const andreu = {
         <img src="https://capsule-render.vercel.app/api?type=venom&color=0:052e16,100:22c55e&height=140&text=Xixauxas&fontSize=44&fontColor=ffffff&animation=fadeIn&desc=League%20of%20Legends%20Coaching%20Platform&descSize=15&descAlignY=72" width="100%" alt="Xixauxas — League of Legends Coaching Platform"/>
       </a>
       <br/>
-      Web platform for a <b>League of Legends streamer and coach</b> to
+      <b>Personal project</b> built with <b>React</b>: a web platform for a
+      <b>League of Legends streamer and coach</b> to
       <b>manage and promote coaching sessions</b> to their community of followers.
       <br/><br/>
-      <img src="https://img.shields.io/badge/Web-22c55e?style=flat-square" alt="Web"/>
+      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
+      <img src="https://img.shields.io/badge/Personal_project-22c55e?style=flat-square" alt="Personal project"/>
       <img src="https://img.shields.io/badge/Gaming-22c55e?style=flat-square" alt="Gaming"/>
       <img src="https://img.shields.io/badge/Coaching-22c55e?style=flat-square" alt="Coaching"/>
       <img src="https://img.shields.io/badge/Status-Live-22c55e?style=flat-square&labelColor=0a0f0a" alt="Status: live"/>
