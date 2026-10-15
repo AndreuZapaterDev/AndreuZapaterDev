@@ -10,14 +10,17 @@
 </p>
 
 <p align="center">
-  <b>I build and modernize business web applications with React and Laravel,</b><br/>
-  and lead the digital department at OK24Horas.
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/tagline-en-dark.svg"/>
+    <img src="assets/tagline-en-light.svg" width="100%" alt="I build and modernize business web applications with React and Laravel, and lead the digital department at OK24Horas."/>
+  </picture>
 </p>
 
 <p align="center">
-  <a href="mailto:andreuzapaterdev@gmail.com"><img src="https://img.shields.io/badge/Email-andreuzapaterdev-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email: andreuzapaterdev@gmail.com"/></a>
+  <a href="mailto:andreuzapaterdev@gmail.com"><img src="assets/btn-email.svg" height="46" alt="Email: andreuzapaterdev@gmail.com"/></a>
+  &nbsp;
   <!-- Replace TU-USUARIO with your LinkedIn handle -->
-  <a href="https://www.linkedin.com/in/TU-USUARIO/"><img src="https://img.shields.io/badge/LinkedIn-Andreu%20Zapater-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://www.linkedin.com/in/TU-USUARIO/"><img src="assets/btn-linkedin.svg" height="46" alt="LinkedIn"/></a>
 </p>
 
 <br/>
@@ -25,34 +28,9 @@
 <!-- ====================== 01 · ABOUT ====================== -->
 <img src="assets/sections/en-01.svg" width="100%" alt="01 — About me"/>
 
-<table>
-  <tr>
-    <td width="55%" valign="top">
-      <br/>
-      <b>Full Stack</b> developer with <b>3 years of experience</b> designing and building
-      end-to-end web applications: user interface, business logic and database.
-      <br/><br/>
-      I currently lead the <b>Digital Department at OK24Horas</b> (Grupo RODI), combining
-      hands-on development with project management and digital strategy.
-      <br/><br/>
-    </td>
-    <td width="45%" valign="top">
-
-```ts
-const andreu = {
-  frontend: ["React", "TypeScript", "Tailwind"],
-  backend:  ["PHP", "Laravel"],
-  data:     ["MySQL", "PostgreSQL"],
-  focus:    "end-to-end web products",
-};
-```
-
-</td>
-  </tr>
-</table>
-
-> [!TIP]
-> **Currently** · Migrating a web application from **ASP.NET** to **React + Laravel** at OK24Horas.
+<p align="center">
+  <img src="assets/about-en.svg" width="100%" alt="About me: Full Stack developer with 3 years of experience building end-to-end web applications. I lead the Digital Department at OK24Horas (Grupo RODI). Currently migrating a web application from ASP.NET to React + Laravel."/>
+</p>
 
 <br/>
 
@@ -69,7 +47,7 @@ const andreu = {
 <img src="assets/sections/en-03.svg" width="100%" alt="03 — Tech stack"/>
 
 <p align="center">
-  <img src="assets/stack-en.svg" width="100%" alt="Stack: HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Angular (basic), PHP, Laravel, Java, MySQL, PostgreSQL, Oracle SQL, Git, GitHub, Docker"/>
+  <img src="assets/stack-en.svg" width="100%" alt="Stack: HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Angular, PHP, Laravel, Java, MySQL, PostgreSQL, Oracle SQL, Git, GitHub, Docker"/>
 </p>
 
 <br/>
@@ -77,28 +55,17 @@ const andreu = {
 <!-- ====================== 04 · PROJECTS ====================== -->
 <img src="assets/sections/en-04.svg" width="100%" alt="04 — Featured projects"/>
 
-<table>
-  <tr>
-    <td>
-      <a href="https://www.xixauxas.es">
-        <img src="assets/xixauxas-preview.png" width="100%" alt="Screenshot of xixauxas.es"/>
-      </a>
-      <h3>Xixauxas</h3>
-      <b>Personal project</b> built with <b>React</b>: a web platform for a
-      <b>League of Legends streamer and coach</b> to
-      <b>manage and promote coaching sessions</b> to their community of followers.
-      <br/><br/>
-      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
-      <img src="https://img.shields.io/badge/Personal_project-22c55e?style=flat-square" alt="Personal project"/>
-      <img src="https://img.shields.io/badge/Gaming-22c55e?style=flat-square" alt="Gaming"/>
-      <img src="https://img.shields.io/badge/Coaching-22c55e?style=flat-square" alt="Coaching"/>
-      <img src="https://img.shields.io/badge/Status-Live-22c55e?style=flat-square&labelColor=0a0f0a" alt="Status: live"/>
-      <br/><br/>
-      <a href="https://www.xixauxas.es"><img src="https://img.shields.io/badge/Visit_site_→-22c55e?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visit xixauxas.es"/></a>
-      <br/><br/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://www.xixauxas.es"><img src="assets/xixauxas-preview.png" width="100%" alt="Screenshot of xixauxas.es"/></a>
+</p>
+
+<p align="center">
+  <img src="assets/project-xixauxas-en.svg" width="100%" alt="Xixauxas: live personal project built with React. Web platform for a League of Legends streamer and coach to manage and promote coaching sessions. Features: coaching booking, bilingual ES/EN site, videos and social media."/>
+</p>
+
+<p align="center">
+  <a href="https://www.xixauxas.es"><img src="assets/btn-visit-en.svg" height="46" alt="Visit xixauxas.es"/></a>
+</p>
 
 <br/>
 
@@ -114,51 +81,24 @@ const andreu = {
 <!-- ====================== 06 · CERTIFICATIONS ====================== -->
 <img src="assets/sections/en-06.svg" width="100%" alt="06 — Certifications"/>
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/EF_SET-14b8a6?style=flat-square" alt="EF SET"/>
-      <h4>English C1</h4>
-      <a href="https://cert.efset.org/YjF4mA"><img src="https://img.shields.io/badge/View_credential_→-0a0f0a?style=flat-square" alt="View credential"/></a>
-    </td>
-    <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/Official_School_of_Languages_(EOI)-14b8a6?style=flat-square" alt="Official School of Languages (EOI)"/>
-      <h4>English B2</h4>
-      <img src="https://img.shields.io/badge/Official_certificate-0a0f0a?style=flat-square" alt="Official certificate"/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://cert.efset.org/YjF4mA"><img src="assets/certs/en-efset-c1.svg" width="49%" alt="English C1 — EF SET (view credential)"/></a>
+  <img src="assets/certs/en-eoi-b2.svg" width="49%" alt="English B2 — Official School of Languages (EOI)"/>
+</p>
 
 <details>
 <summary><b>Show more certifications (4)</b></summary>
 <br/>
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/Google_Skillshop-14b8a6?style=flat-square&logo=google&logoColor=white" alt="Google Skillshop"/>
-      <h4>Digital skills for professionals</h4>
-      <a href="https://skillshop.exceedlms.com/student/award/885R6WYRgqz8ZjDSTvqTJ22e"><img src="https://img.shields.io/badge/View_credential_→-0a0f0a?style=flat-square" alt="View credential"/></a>
-    </td>
-    <td valign="top">
-      <img src="https://img.shields.io/badge/Google_Skillshop-14b8a6?style=flat-square&logo=google&logoColor=white" alt="Google Skillshop"/>
-      <h4>Personal productivity</h4>
-      <a href="https://skillshop.exceedlms.com/student/award/466kx7XcQm9GaTJmx551tLEr"><img src="https://img.shields.io/badge/View_credential_→-0a0f0a?style=flat-square" alt="View credential"/></a>
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src="https://img.shields.io/badge/Google_Skillshop-14b8a6?style=flat-square&logo=google&logoColor=white" alt="Google Skillshop"/>
-      <h4>Introduction to web development: HTML & CSS (1/2)</h4>
-      <a href="https://skillshop.exceedlms.com/student/award/JyNpgpNz1V2sxGqbp1dhiYys"><img src="https://img.shields.io/badge/View_credential_→-0a0f0a?style=flat-square" alt="View credential"/></a>
-    </td>
-    <td valign="top">
-      <img src="https://img.shields.io/badge/Google_Skillshop-14b8a6?style=flat-square&logo=google&logoColor=white" alt="Google Skillshop"/>
-      <h4>Introduction to web development: HTML & CSS (2/2)</h4>
-      <a href="https://skillshop.exceedlms.com/student/award/SDWE51yRTBmXGwGrntJnsRad"><img src="https://img.shields.io/badge/View_credential_→-0a0f0a?style=flat-square" alt="View credential"/></a>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://skillshop.exceedlms.com/student/award/885R6WYRgqz8ZjDSTvqTJ22e"><img src="assets/certs/en-google-digital.svg" width="49%" alt="Digital skills for professionals — Google Skillshop (view credential)"/></a>
+  <a href="https://skillshop.exceedlms.com/student/award/466kx7XcQm9GaTJmx551tLEr"><img src="assets/certs/en-google-productivity.svg" width="49%" alt="Personal productivity — Google Skillshop (view credential)"/></a>
+</p>
+
+<p align="center">
+  <a href="https://skillshop.exceedlms.com/student/award/JyNpgpNz1V2sxGqbp1dhiYys"><img src="assets/certs/en-google-web-1.svg" width="49%" alt="Introduction to web development: HTML & CSS (1/2) — Google Skillshop (view credential)"/></a>
+  <a href="https://skillshop.exceedlms.com/student/award/SDWE51yRTBmXGwGrntJnsRad"><img src="assets/certs/en-google-web-2.svg" width="49%" alt="Introduction to web development: HTML & CSS (2/2) — Google Skillshop (view credential)"/></a>
+</p>
 
 </details>
 
@@ -168,10 +108,7 @@ const andreu = {
 <img src="assets/sections/en-07.svg" width="100%" alt="07 — GitHub activity"/>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AndreuZapaterDev/AndreuZapaterDev/output/profile-night-green.svg"/>
-    <img src="https://raw.githubusercontent.com/AndreuZapaterDev/AndreuZapaterDev/output/profile-green-animate.svg" alt="3D contribution graph, languages and GitHub stats" width="100%"/>
-  </picture>
+  <img src="https://raw.githubusercontent.com/AndreuZapaterDev/AndreuZapaterDev/output/activity-en.svg" width="100%" alt="GitHub activity: contributions in the last year, streaks, repositories and most used languages"/>
 </p>
 
 <!-- ====================== FOOTER ====================== -->

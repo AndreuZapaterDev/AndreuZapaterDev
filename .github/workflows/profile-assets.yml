@@ -1,5 +1,5 @@
-# Genera las imágenes dinámicas del perfil (estadísticas 3D de contribuciones)
-# y las publica en la rama `output`, para no depender de servicios externos ni ensuciar `main`.
+# Genera la tarjeta de actividad de GitHub (scripts/gen_activity.py) con datos reales
+# y la publica en la rama `output`, para no depender de servicios externos ni ensuciar `main`.
 name: Profile assets
 
 on:
@@ -17,14 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Estadísticas 3D de contribuciones
-        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+      - uses: actions/checkout@v4.2.2
+
+      - name: Tarjeta de actividad
+        run: python3 scripts/gen_activity.py dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-
-      - name: Reunir archivos
-        run: mkdir -p dist && cp profile-3d-contrib/*.svg dist/
 
       - name: Publicar en la rama output
         uses: crazy-max/ghaction-github-pages@v4.2.0

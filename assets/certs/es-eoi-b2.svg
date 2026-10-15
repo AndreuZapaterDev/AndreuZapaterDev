@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="590" height="150" viewBox="0 0 590 150" role="img" aria-label="Inglés B2 — Escuela Oficial de Idiomas">
+  <defs><radialGradient id="cg" cx="0" cy="0" r=".9"><stop offset="0" stop-color="#14b8a6" stop-opacity=".14"/><stop offset="1" stop-color="#14b8a6" stop-opacity="0"/></radialGradient></defs>
+  <rect x=".5" y=".5" width="589" height="149" rx="16" fill="#0a0f0a" stroke="#14b8a6" stroke-opacity=".32"/>
+  <rect x=".5" y=".5" width="589" height="149" rx="16" fill="url(#cg)"/>
+  <text x="566" y="66" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="46" font-weight="800" fill="#14b8a6" fill-opacity=".16">B2</text>
+  <rect x="24" y="24" width="48" height="48" rx="12" fill="#14b8a6" fill-opacity=".14" stroke="#14b8a6" stroke-opacity=".4"/>
+  <g transform="translate(36 36)" fill="none" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></g>
+  <text x="88" y="42" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" font-weight="700" letter-spacing="1.5" fill="#14b8a6">ESCUELA OFICIAL DE IDIOMAS</text>
+  <text x="88" y="68" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="18.0" font-weight="700" fill="#ffffff">Inglés B2</text>
+  <rect x="24" y="98" width="542" height="1" fill="#ffffff" fill-opacity=".08"/>
+  <g transform="translate(24 114) scale(.6667)" fill="none" stroke="#a3a3a3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></g><text x="46" y="128" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#a3a3a3">Certificado oficial</text>
+</svg>

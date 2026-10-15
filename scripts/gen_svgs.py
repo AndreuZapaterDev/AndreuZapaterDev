@@ -254,7 +254,7 @@ def stack_svg(titles, basic_label):
         )
         cx, cy = px + 20, py + 60
         for slug, name, bc in items:
-            extra = f" · {basic_label}" if slug == "angular" else ""
+            extra = ""
             w = 44 + len(name) * 7.7 + len(extra) * 6.4 + 14
             out.append(
                 f'<rect x="{cx:.0f}" y="{cy}" width="{w:.0f}" height="40" rx="10" fill="#111811" stroke="#ffffff" stroke-opacity=".08"/>'
@@ -375,5 +375,322 @@ write("languages-en.svg", languages_svg([
     ("ES", "Spanish", "Native", 5), ("CA", "Catalan", "Native", 5),
     ("EN", "English", "B2 · EOI  |  C1 · EF SET", 4)],
     "Languages: Spanish native, Catalan native, English B2 (EOI) and C1 (EF SET)"))
+
+# ---------------------------------------------------------------- sobre mí
+def rich(line):
+    """Convierte **negrita** en tspans resaltados."""
+    out = []
+    for i, chunk in enumerate(line.split("**")):
+        if not chunk:
+            continue
+        out.append(f'<tspan fill="#ffffff" font-weight="700">{escape(chunk)}</tspan>' if i % 2 else escape(chunk))
+    return "".join(out)
+
+
+def about_svg(paragraphs, stats, code, now_label, now_text, label):
+    color = "#a3e635"
+    H = 430
+    out = [
+        f'<rect x=".5" y=".5" width="1199" height="{H - 1}" rx="18" fill="{BG}" stroke="{color}" stroke-opacity=".3"/>',
+        f'<rect x=".5" y=".5" width="1199" height="{H - 1}" rx="18" fill="url(#ag)"/>',
+    ]
+    # Texto
+    y = 66
+    for para in paragraphs:
+        for line in para:
+            out.append(f'<text x="40" y="{y}" font-family="{SANS}" font-size="17" fill="#a3a3a3">{rich(line)}</text>')
+            y += 28
+        y += 14
+    # Cifras
+    sx = 40
+    for num, lab in stats:
+        out.append(
+            f'<rect x="{sx}" y="262" width="170" height="78" rx="12" fill="#111811" stroke="#ffffff" stroke-opacity=".07"/>'
+            f'<text x="{sx + 18}" y="304" font-family="{SANS}" font-size="34" font-weight="800" fill="{color}">{escape(num)}</text>'
+            f'<text x="{sx + 18}" y="326" font-family="{SANS}" font-size="13" fill="#a3a3a3">{escape(lab)}</text>')
+        sx += 184
+    # Editor
+    ex, ey, ew, eh = 640, 40, 520, 300
+    out.append(
+        f'<rect x="{ex}" y="{ey}" width="{ew}" height="{eh}" rx="12" fill="#0f150f" stroke="#ffffff" stroke-opacity=".1"/>'
+        f'<path d="M{ex + 12} {ey}h{ew - 24}a12 12 0 0 1 12 12v28H{ex}V{ey + 12}a12 12 0 0 1 12-12z" fill="#182018"/>'
+        f'<circle cx="{ex + 20}" cy="{ey + 20}" r="6" fill="#ff5f57"/><circle cx="{ex + 40}" cy="{ey + 20}" r="6" fill="#febc2e"/><circle cx="{ex + 60}" cy="{ey + 20}" r="6" fill="#28c840"/>'
+        f'<rect x="{ex + 84}" y="{ey + 8}" width="100" height="32" rx="6" fill="#0f150f"/>'
+        f'<rect x="{ex + 84}" y="{ey + 38}" width="100" height="2" fill="{color}"/>'
+        f'<text x="{ex + 134}" y="{ey + 29}" text-anchor="middle" font-family="{MONO}" font-size="12" fill="#d4d4d4">andreu.ts</text>')
+    cy = ey + 80
+    for n, tokens in enumerate(code, 1):
+        spans = "".join(f'<tspan fill="{c}">{escape(t)}</tspan>' for t, c in tokens)
+        out.append(
+            f'<text x="{ex + 34}" y="{cy}" text-anchor="end" font-family="{MONO}" font-size="13" fill="#3f3f46">{n}</text>'
+            f'<text x="{ex + 52}" y="{cy}" font-family="{MONO}" font-size="14" xml:space="preserve">{spans}</text>')
+        cy += 30
+    # Barra de estado del editor
+    out.append(
+        f'<path d="M{ex} {ey + eh - 30}h{ew}v18a12 12 0 0 1-12 12H{ex + 12}a12 12 0 0 1-12-12z" fill="#182018"/>'
+        f'<text x="{ex + 16}" y="{ey + eh - 11}" font-family="{MONO}" font-size="11" fill="{color}">⎇ main</text>'
+        f'<text x="{ex + ew - 16}" y="{ey + eh - 11}" text-anchor="end" font-family="{MONO}" font-size="11" fill="#737373">TypeScript  ·  UTF-8  ·  Ln 6, Col 3</text>')
+    # Franja "ahora mismo"
+    out.append(
+        f'<rect x="20" y="{H - 70}" width="1160" height="50" rx="12" fill="{color}" fill-opacity=".08" stroke="{color}" stroke-opacity=".3"/>'
+        f'<circle cx="46" cy="{H - 45}" r="5" fill="{color}"><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></circle>'
+        f'<text x="62" y="{H - 40}" font-family="{MONO}" font-size="13" font-weight="700" letter-spacing="2" fill="{color}">{escape(now_label)}</text>'
+        f'<text x="{62 + len(now_label) * 9.8 + 18:.0f}" y="{H - 40}" font-family="{SANS}" font-size="15" fill="#e5e5e5">{rich(now_text)}</text>')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{H}" viewBox="0 0 1200 {H}" role="img" aria-label="{escape(label)}">'
+            f'<defs><radialGradient id="ag" cx="0" cy="0" r=".8"><stop offset="0" stop-color="{color}" stop-opacity=".12"/>'
+            f'<stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient></defs>'
+            + "".join(out) + '</svg>\n')
+
+
+KW, KEY, STR, PUN, ID = "#c084fc", "#7dd3fc", "#a3e635", "#737373", "#f5f5f5"
+
+
+def code_lines(focus):
+    def arr(items):
+        toks = [("[", PUN)]
+        for i, it in enumerate(items):
+            toks.append((f'"{it}"', STR))
+            if i < len(items) - 1:
+                toks.append((", ", PUN))
+        return toks + [("],", PUN)]
+    return [
+        [("const ", KW), ("andreu", ID), (" = {", PUN)],
+        [("  frontend", KEY), (": ", PUN)] + arr(["React", "TypeScript", "Tailwind"]),
+        [("  backend", KEY), (":  ", PUN)] + arr(["PHP", "Laravel"]),
+        [("  data", KEY), (":     ", PUN)] + arr(["MySQL", "PostgreSQL"]),
+        [("  focus", KEY), (":    ", PUN), (f'"{focus}"', STR), (",", PUN)],
+        [("};", PUN)],
+    ]
+
+
+write("about-es.svg", about_svg(
+    [["Desarrollador **Full Stack** con **3 años de experiencia** diseñando",
+      "y construyendo aplicaciones web de extremo a extremo:",
+      "interfaz, lógica de negocio y base de datos."],
+     ["Lidero el **Departamento Digital de OK24Horas** (Grupo RODI),",
+      "combinando desarrollo técnico, gestión de proyectos",
+      "y estrategia digital."]],
+    [("3", "años de experiencia"), ("16", "tecnologías"), ("3", "idiomas")],
+    code_lines("producto web de extremo a extremo"),
+    "AHORA MISMO",
+    "Migrando una aplicación web de **ASP.NET** a **React + Laravel** en OK24Horas",
+    "Sobre mí: desarrollador Full Stack con 3 años de experiencia. Lidero el Departamento Digital de OK24Horas "
+    "(Grupo RODI). Ahora mismo: migrando una aplicación web de ASP.NET a React + Laravel."))
+
+write("about-en.svg", about_svg(
+    [["**Full Stack** developer with **3 years of experience** designing",
+      "and building end-to-end web applications:",
+      "user interface, business logic and database."],
+     ["I lead the **Digital Department at OK24Horas** (Grupo RODI),",
+      "combining hands-on development, project management",
+      "and digital strategy."]],
+    [("3", "years of experience"), ("16", "technologies"), ("3", "languages")],
+    code_lines("end-to-end web products"),
+    "CURRENTLY",
+    "Migrating a web application from **ASP.NET** to **React + Laravel** at OK24Horas",
+    "About me: Full Stack developer with 3 years of experience. I lead the Digital Department at OK24Horas "
+    "(Grupo RODI). Currently migrating a web application from ASP.NET to React + Laravel."))
+
+
+# ---------------------------------------------------------------- proyecto
+CHECK = '<path d="M20 6 9 17l-5-5"/>'
+
+
+def project_svg(status, kind, title, subtitle, desc_lines, stack_label, stack, feat_label, features, label):
+    color = "#22c55e"
+    H = 280
+    out = [
+        f'<rect x=".5" y=".5" width="1199" height="{H - 1}" rx="18" fill="{BG}" stroke="{color}" stroke-opacity=".3"/>',
+        f'<rect x=".5" y=".5" width="1199" height="{H - 1}" rx="18" fill="url(#pg)"/>',
+    ]
+    # Píldoras de estado y tipo
+    sw = len(status) * 7.6 + 44
+    out.append(
+        f'<rect x="40" y="36" width="{sw:.0f}" height="28" rx="14" fill="{color}" fill-opacity=".16" stroke="{color}" stroke-opacity=".6"/>'
+        f'<circle cx="58" cy="50" r="4.5" fill="{color}"><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></circle>'
+        f'<text x="70" y="55" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="1.5" fill="{color}">{escape(status)}</text>')
+    kw = len(kind) * 7.6 + 28
+    out.append(
+        f'<rect x="{40 + sw + 8:.0f}" y="36" width="{kw:.0f}" height="28" rx="14" fill="#111811" stroke="#ffffff" stroke-opacity=".15"/>'
+        f'<text x="{40 + sw + 8 + kw / 2:.0f}" y="55" text-anchor="middle" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="1.5" fill="#d4d4d4">{escape(kind)}</text>')
+    # Título y descripción
+    out.append(
+        f'<text x="38" y="114" font-family="{SANS}" font-size="40" font-weight="800" fill="#ffffff">{escape(title)}</text>'
+        f'<text x="40" y="142" font-family="{SANS}" font-size="15" font-weight="600" fill="{color}">{escape(subtitle)}</text>')
+    y = 186
+    for line in desc_lines:
+        out.append(f'<text x="40" y="{y}" font-family="{SANS}" font-size="16" fill="#a3a3a3">{rich(line)}</text>')
+        y += 26
+    # Panel derecho
+    px = 770
+    out.append(f'<rect x="{px - 30}" y="30" width="1" height="{H - 60}" fill="#ffffff" fill-opacity=".08"/>')
+    out.append(f'<text x="{px}" y="52" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="2" fill="{color}">{escape(stack_label)}</text>')
+    cx = px
+    for slug, name, bc in stack:
+        w = 44 + len(name) * 7.7 + 14
+        out.append(
+            f'<rect x="{cx:.0f}" y="66" width="{w:.0f}" height="38" rx="10" fill="#111811" stroke="#ffffff" stroke-opacity=".08"/>'
+            f'<g transform="translate({cx + 13:.0f} 75) scale(.8333)"><path d="{brand_path(slug)}" fill="{bc}"/></g>'
+            f'<text x="{cx + 44:.0f}" y="91" font-family="{SANS}" font-size="15" font-weight="600" fill="#f5f5f5">{escape(name)}</text>')
+        cx += w + 8
+    out.append(f'<text x="{px}" y="144" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="2" fill="{color}">{escape(feat_label)}</text>')
+    fy = 176
+    for f in features:
+        out.append(
+            f'<circle cx="{px + 10}" cy="{fy - 5}" r="10" fill="{color}" fill-opacity=".15"/>'
+            f'<g transform="translate({px + 3} {fy - 12}) scale(.5833)" fill="none" stroke="{color}" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">{CHECK}</g>'
+            f'<text x="{px + 30}" y="{fy}" font-family="{SANS}" font-size="15" fill="#e5e5e5">{escape(f)}</text>')
+        fy += 30
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{H}" viewBox="0 0 1200 {H}" role="img" aria-label="{escape(label)}">'
+            f'<defs><radialGradient id="pg" cx="0" cy="0" r=".8"><stop offset="0" stop-color="{color}" stop-opacity=".12"/>'
+            f'<stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient></defs>'
+            + "".join(out) + '</svg>\n')
+
+
+REACT = [("react", "React", "#61DAFB")]
+
+write("project-xixauxas-es.svg", project_svg(
+    "EN PRODUCCIÓN", "PROYECTO PERSONAL", "Xixauxas", "League of Legends · Plataforma de coaching",
+    ["Plataforma web para un **streamer y coach de League of Legends**",
+     "que le permite **gestionar y promocionar sus sesiones de coaching**",
+     "entre su comunidad de seguidores."],
+    "STACK", REACT, "FUNCIONALIDADES",
+    ["Reserva de sesiones de coaching", "Web bilingüe ES / EN", "Vídeos y redes sociales integrados"],
+    "Xixauxas: proyecto personal en producción desarrollado con React. Plataforma web para un streamer y coach de "
+    "League of Legends para gestionar y promocionar sus sesiones de coaching. Reserva de coachings, web bilingüe ES/EN, vídeos y redes sociales."))
+
+write("project-xixauxas-en.svg", project_svg(
+    "LIVE", "PERSONAL PROJECT", "Xixauxas", "League of Legends · Coaching platform",
+    ["Web platform for a **League of Legends streamer and coach**",
+     "to **manage and promote coaching sessions**",
+     "to their community of followers."],
+    "STACK", REACT, "FEATURES",
+    ["Coaching session booking", "Bilingual site ES / EN", "Integrated videos and social media"],
+    "Xixauxas: live personal project built with React. Web platform for a League of Legends streamer and coach "
+    "to manage and promote coaching sessions. Coaching booking, bilingual ES/EN site, videos and social media."))
+
+
+# ---------------------------------------------------------------- frase de posicionamiento
+# Fondo transparente: versión clara y oscura (README usa <picture> según el tema de GitHub)
+def tagline_svg(parts, line2, theme):
+    main = "#0a0f0a" if theme == "light" else "#f5f5f5"
+    accent = "#4d7c0f" if theme == "light" else "#a3e635"
+    sub = "#525252" if theme == "light" else "#a3a3a3"
+    spans = "".join(
+        f'<tspan fill="{accent}" font-weight="800">{escape(t)}</tspan>' if hi else escape(t)
+        for t, hi in parts)
+    label = "".join(t for t, _ in parts) + " " + line2
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" role="img" aria-label="{escape(label)}">
+  <defs>
+    <linearGradient id="u" x1="0" x2="1">
+      <stop offset="0" stop-color="{LIME}" stop-opacity="0"/>
+      <stop offset=".5" stop-color="{LIME}"/>
+      <stop offset="1" stop-color="{LIME}" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <text x="600" y="46" text-anchor="middle" font-family="{SANS}" font-size="27" font-weight="700" fill="{main}">{spans}</text>
+  <text x="600" y="82" text-anchor="middle" font-family="{SANS}" font-size="19" fill="{sub}">{escape(line2)}</text>
+  <rect x="540" y="104" width="120" height="3" rx="1.5" fill="url(#u)"/>
+</svg>
+'''
+
+
+TAGLINES = {
+    "es": ([("Construyo y modernizo aplicaciones web de negocio con ", False), ("React", True),
+            (" y ", False), ("Laravel", True)], "y lidero el área digital de OK24Horas."),
+    "en": ([("I build and modernize business web applications with ", False), ("React", True),
+            (" and ", False), ("Laravel", True)], "and lead the digital department at OK24Horas."),
+}
+for lang, (parts, line2) in TAGLINES.items():
+    for theme in ("light", "dark"):
+        write(f"tagline-{lang}-{theme}.svg", tagline_svg(parts, line2, theme))
+
+
+# ---------------------------------------------------------------- botones de contacto
+MAIL_ICON = '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>'
+
+
+def button_svg(text, icon_svg, primary, color=LIME):
+    w = 64 + len(text) * 8.6 + 28
+    fill = color if primary else BG
+    fg = BG if primary else "#f5f5f5"
+    stroke = "" if primary else f' stroke="{color}" stroke-opacity=".55"'
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w:.0f}" height="52" viewBox="0 0 {w:.0f} 52" role="img" aria-label="{escape(text)}">
+  <rect x=".75" y=".75" width="{w - 1.5:.1f}" height="50.5" rx="25.25" fill="{fill}"{stroke}/>
+  <g transform="translate(26 14)">{icon_svg(BG if primary else color)}</g>
+  <text x="60" y="32" font-family="{SANS}" font-size="16" font-weight="700" fill="{fg}">{escape(text)}</text>
+</svg>
+'''
+
+
+write("btn-email.svg", button_svg(
+    "andreuzapaterdev@gmail.com",
+    lambda c: f'<g fill="none" stroke="{c}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{MAIL_ICON}</g>',
+    primary=True))
+write("btn-linkedin.svg", button_svg(
+    "LinkedIn",
+    lambda c: f'<path d="{brand_path("linkedin")}" fill="{c}"/>',
+    primary=False))
+
+# ---------------------------------------------------------------- certificaciones
+AWARD = ICONS["award"]
+
+
+def cert_svg(issuer, title, footer, linked, icon, level=None):
+    color = "#14b8a6"
+    W, H = 590, 150
+    fs = min(18, 476 / (len(title) * 0.56))
+    if icon == "google":
+        ic = f'<g transform="translate(36 36) scale(1)"><path d="{brand_path("google")}" fill="{color}"/></g>'
+    else:
+        ic = (f'<g transform="translate(36 36)" fill="none" stroke="{color}" stroke-width="2" '
+              f'stroke-linecap="round" stroke-linejoin="round">{AWARD}</g>')
+    mark = (f'<text x="{W - 24}" y="66" text-anchor="end" font-family="{MONO}" font-size="46" font-weight="800" '
+            f'fill="{color}" fill-opacity=".16">{level}</text>') if level else ""
+    if linked:
+        foot = (f'<text x="24" y="{H - 22}" font-family="{SANS}" font-size="14" font-weight="700" fill="{color}">{escape(footer)}</text>'
+                f'<g transform="translate({24 + len(footer) * 6.9 + 6:.0f} {H - 36}) scale(.6667)" fill="none" stroke="{color}" '
+                f'stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></g>')
+    else:
+        foot = (f'<g transform="translate(24 {H - 36}) scale(.6667)" fill="none" stroke="#a3a3a3" stroke-width="3" '
+                f'stroke-linecap="round" stroke-linejoin="round">{CHECK}</g>'
+                f'<text x="46" y="{H - 22}" font-family="{SANS}" font-size="14" font-weight="600" fill="#a3a3a3">{escape(footer)}</text>')
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{escape(title)} — {escape(issuer)}">
+  <defs><radialGradient id="cg" cx="0" cy="0" r=".9"><stop offset="0" stop-color="{color}" stop-opacity=".14"/><stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient></defs>
+  <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="16" fill="{BG}" stroke="{color}" stroke-opacity=".32"/>
+  <rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="16" fill="url(#cg)"/>
+  {mark}
+  <rect x="24" y="24" width="48" height="48" rx="12" fill="{color}" fill-opacity=".14" stroke="{color}" stroke-opacity=".4"/>
+  {ic}
+  <text x="88" y="42" font-family="{MONO}" font-size="12" font-weight="700" letter-spacing="1.5" fill="{color}">{escape(issuer.upper())}</text>
+  <text x="88" y="68" font-family="{SANS}" font-size="{fs:.1f}" font-weight="700" fill="#ffffff">{escape(title)}</text>
+  <rect x="24" y="{H - 52}" width="{W - 48}" height="1" fill="#ffffff" fill-opacity=".08"/>
+  {foot}
+</svg>
+'''
+
+
+os.makedirs(os.path.join(OUT, "certs"), exist_ok=True)
+CERTS = {
+    # id: (emisor, título ES, título EN, enlazada, icono, nivel)
+    "efset-c1": ("EF SET", "Inglés C1", "English C1", True, "award", "C1"),
+    "eoi-b2": ("Escuela Oficial de Idiomas", "Inglés B2", "English B2", False, "award", "B2"),
+    "google-digital": ("Google Skillshop", "Competencias digitales para profesionales", "Digital skills for professionals", True, "google", None),
+    "google-productivity": ("Google Skillshop", "Productividad personal", "Personal productivity", True, "google", None),
+    "google-web-1": ("Google Skillshop", "Introducción al desarrollo web: HTML y CSS (1/2)", "Introduction to web development: HTML & CSS (1/2)", True, "google", None),
+    "google-web-2": ("Google Skillshop", "Introducción al desarrollo web: HTML y CSS (2/2)", "Introduction to web development: HTML & CSS (2/2)", True, "google", None),
+}
+for cid, (issuer, es, en, linked, icon, level) in CERTS.items():
+    en_issuer = "Official School of Languages (EOI)" if cid == "eoi-b2" else issuer
+    write(f"certs/es-{cid}.svg", cert_svg(issuer, es, "Ver credencial" if linked else "Certificado oficial", linked, icon, level))
+    write(f"certs/en-{cid}.svg", cert_svg(en_issuer, en, "View credential" if linked else "Official certificate", linked, icon, level))
+
+
+ARROW = '<path d="M7 17 17 7M7 7h10v10"/>'
+for lang, txt in (("es", "Visitar xixauxas.es"), ("en", "Visit xixauxas.es")):
+    write(f"btn-visit-{lang}.svg", button_svg(
+        txt,
+        lambda c: f'<g fill="none" stroke="{c}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{ARROW}</g>',
+        primary=True, color="#22c55e"))
 
 print("ok")

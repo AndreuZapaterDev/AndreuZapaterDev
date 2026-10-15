@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" role="img" aria-label="I build and modernize business web applications with React and Laravel and lead the digital department at OK24Horas.">
+  <defs>
+    <linearGradient id="u" x1="0" x2="1">
+      <stop offset="0" stop-color="#84cc16" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#84cc16"/>
+      <stop offset="1" stop-color="#84cc16" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <text x="600" y="46" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="27" font-weight="700" fill="#f5f5f5">I build and modernize business web applications with <tspan fill="#a3e635" font-weight="800">React</tspan> and <tspan fill="#a3e635" font-weight="800">Laravel</tspan></text>
+  <text x="600" y="82" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="19" fill="#a3a3a3">and lead the digital department at OK24Horas.</text>
+  <rect x="540" y="104" width="120" height="3" rx="1.5" fill="url(#u)"/>
+</svg>
