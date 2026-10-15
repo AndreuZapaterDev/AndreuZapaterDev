@@ -356,26 +356,26 @@ def timeline_svg(entries, label):
 
 
 write("timeline-es.svg", timeline_svg([
-    ("● ACTUALIDAD", "Jefe del Departamento Digital", "OK24Horas · Grupo RODI",
+    ("● 2026 – ACTUALIDAD", "Jefe del Departamento Digital", "OK24Horas · Grupo RODI",
      "Coordinación de proyectos, estrategia digital y supervisión del desarrollo técnico.",
      ["PROMOCIÓN INTERNA", "ASP.NET → REACT + LARAVEL"], LIME, True),
-    ("2 AÑOS", "Full Stack Developer", "OK24Horas · Grupo RODI",
+    ("2024 – 2025", "Full Stack Developer", "OK24Horas · Grupo RODI",
      "Desarrollo de aplicaciones web de extremo a extremo, desde la interfaz hasta la base de datos.",
      [], "#65a30d", False),
     ("FORMACIÓN", "Desarrollo de Aplicaciones Web (DAW)", "Ciclo Formativo de Grado Superior",
      None, [], "#a3a3a3", False),
-], "Trayectoria: Jefe del Departamento Digital en OK24Horas (actualidad), Full Stack Developer en OK24Horas (2 años), Grado Superior en DAW"))
+], "Trayectoria: Jefe del Departamento Digital en OK24Horas (2026 – actualidad), Full Stack Developer en OK24Horas (2024 – 2025), Grado Superior en DAW"))
 
 write("timeline-en.svg", timeline_svg([
-    ("● PRESENT", "Head of Digital", "OK24Horas · Grupo RODI",
+    ("● 2026 – PRESENT", "Head of Digital", "OK24Horas · Grupo RODI",
      "Project coordination, digital strategy and oversight of technical development.",
      ["INTERNAL PROMOTION", "ASP.NET → REACT + LARAVEL"], LIME, True),
-    ("2 YEARS", "Full Stack Developer", "OK24Horas · Grupo RODI",
+    ("2024 – 2025", "Full Stack Developer", "OK24Horas · Grupo RODI",
      "End-to-end web application development, from user interface to database.",
      [], "#65a30d", False),
     ("EDUCATION", "Web Application Development (DAW)", "Higher Vocational Training Degree (Spain)",
      None, [], "#a3a3a3", False),
-], "Experience: Head of Digital at OK24Horas (present), Full Stack Developer at OK24Horas (2 years), Web Application Development degree"))
+], "Experience: Head of Digital at OK24Horas (2026 – present), Full Stack Developer at OK24Horas (2024 – 2025), Web Application Development degree"))
 
 
 # ---------------------------------------------------------------- idiomas

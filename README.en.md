@@ -38,7 +38,7 @@
 <img src="assets/sections/en-02.svg" width="100%" alt="02 — Experience"/>
 
 <p align="center">
-  <img src="assets/timeline-en.svg" width="100%" alt="Experience: Head of Digital at OK24Horas (present, internal promotion, ASP.NET to React + Laravel migration); Full Stack Developer at OK24Horas (2 years); Web Application Development degree"/>
+  <img src="assets/timeline-en.svg" width="100%" alt="Experience: Head of Digital at OK24Horas (2026 – present, internal promotion, ASP.NET to React + Laravel migration); Full Stack Developer at OK24Horas (2024 – 2025); Web Application Development degree"/>
 </p>
 
 <br/>

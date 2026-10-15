@@ -56,7 +56,7 @@
 <img src="assets/sections/es-02.svg" width="100%" alt="02 — Trayectoria"/>
 
 <p align="center">
-  <img src="assets/timeline-es.svg" width="100%" alt="Trayectoria: Jefe del Departamento Digital en OK24Horas (actualidad, promoción interna, migración ASP.NET a React + Laravel); Full Stack Developer en OK24Horas (2 años); Grado Superior en Desarrollo de Aplicaciones Web"/>
+  <img src="assets/timeline-es.svg" width="100%" alt="Trayectoria: Jefe del Departamento Digital en OK24Horas (2026 – actualidad, promoción interna, migración ASP.NET a React + Laravel); Full Stack Developer en OK24Horas (2024 – 2025); Grado Superior en Desarrollo de Aplicaciones Web"/>
 </p>
 
 <br/>
