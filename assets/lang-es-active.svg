@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="36" viewBox="0 0 130 36" role="img" aria-label="Español">
+  <rect x=".75" y=".75" width="128.4" height="34.5" rx="17.25" fill="#84cc16"/>
+  <g transform="translate(16 10) scale(.6667)" fill="none" stroke="#0a0f0a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></g>
+  <text x="38" y="23" textLength="14.9" lengthAdjust="spacing" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" font-weight="800" fill="#0a0f0a">ES</text>
+  <text x="61" y="23" textLength="53.0" lengthAdjust="spacing" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#0a0f0a">Español</text>
+</svg>

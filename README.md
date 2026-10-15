@@ -20,7 +20,8 @@
 -->
 
 <p align="right">
-  <b>Español</b> · <a href="README.en.md">English</a>
+  <img src="assets/lang-es-active.svg" height="32" alt="Español (idioma actual)"/>
+  <a href="README.en.md"><img src="assets/lang-en.svg" height="32" alt="Read in English"/></a>
 </p>
 
 <!-- ====================== CABECERA ====================== -->

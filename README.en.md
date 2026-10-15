@@ -1,7 +1,8 @@
 <!-- English version of README.md — keep both files in sync. -->
 
 <p align="right">
-  <a href="README.md">Español</a> · <b>English</b>
+  <a href="README.md"><img src="assets/lang-es.svg" height="32" alt="Leer en español"/></a>
+  <img src="assets/lang-en-active.svg" height="32" alt="English (current language)"/>
 </p>
 
 <!-- ====================== HEADER ====================== -->

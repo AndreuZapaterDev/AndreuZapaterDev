@@ -804,4 +804,34 @@ for lang, txt in (("es", "Visitar zensu.vercel.app"), ("en", "Visit zensu.vercel
         lambda c: f'<g fill="none" stroke="{c}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{ARROW}</g>',
         primary=True, color="#22c55e"))
 
+# ---------------------------------------------------------------- selector de idioma
+GLOBE = ICONS["globe"]
+
+
+def lang_pill(code, name, active):
+    """Píldora del selector de idioma: la activa en lima, la otra oscura con borde."""
+    cw, nw = len(code) * 12 * .62, text_width(name, 14)  # monoespaciada: ~0.62 em por carácter
+    pad, gap = 16, 8
+    globe = 22 if active else 0
+    w = pad + globe + cw + gap + nw + pad
+    if active:
+        bg, stroke, ccol, ncol = LIME, "", BG, BG
+    else:
+        bg, stroke, ccol, ncol = BG, ' stroke="#ffffff" stroke-opacity=".18"', LIME, "#d4d4d4"
+    icon = (f'<g transform="translate({pad} 10) scale(.6667)" fill="none" stroke="{BG}" stroke-width="2.4" '
+            f'stroke-linecap="round" stroke-linejoin="round">{GLOBE}</g>') if active else ""
+    x = pad + globe
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w:.0f}" height="36" viewBox="0 0 {w:.0f} 36" role="img" aria-label="{escape(name)}">
+  <rect x=".75" y=".75" width="{w - 1.5:.1f}" height="34.5" rx="17.25" fill="{bg}"{stroke}/>
+  {icon}
+  <text x="{x:.0f}" y="23" textLength="{cw:.1f}" lengthAdjust="spacing" font-family="{MONO}" font-size="12" font-weight="800" fill="{ccol}">{code}</text>
+  <text x="{x + cw + gap:.0f}" y="23" textLength="{nw:.1f}" lengthAdjust="spacing" font-family="{SANS}" font-size="14" font-weight="600" fill="{ncol}">{escape(name)}</text>
+</svg>
+'''
+
+
+for code, name in (("ES", "Español"), ("EN", "English")):
+    write(f"lang-{code.lower()}-active.svg", lang_pill(code, name, True))
+    write(f"lang-{code.lower()}.svg", lang_pill(code, name, False))
+
 print("ok")
