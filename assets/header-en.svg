@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Andreu Zapater Fillat — Head of Digital · OK24Horas">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#84cc16" stroke-opacity=".07"/>
+    </pattern>
+    <radialGradient id="glow1" cx="1" cy="0" r=".7">
+      <stop offset="0" stop-color="#84cc16" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#84cc16" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="1" r=".6">
+      <stop offset="0" stop-color="#22c55e" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="name" x1="0" x2="1">
+      <stop offset="0" stop-color="#d9f99d"/>
+      <stop offset="1" stop-color="#84cc16"/>
+    </linearGradient>
+    <clipPath id="card"><rect width="1200" height="360" rx="20"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="360" fill="#0a0f0a"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+    <rect width="1200" height="360" fill="url(#glow1)">
+      <animate attributeName="opacity" values=".75;1;.75" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <rect width="1200" height="360" fill="url(#glow2)"/>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="359" rx="20" fill="none" stroke="#84cc16" stroke-opacity=".25"/>
+
+  <!-- Columna izquierda -->
+  <rect x="60" y="56" width="236" height="30" rx="15" fill="#84cc16" fill-opacity=".1" stroke="#84cc16" stroke-opacity=".5"/>
+  <circle cx="80" cy="71" r="5" fill="#84cc16">
+    <animate attributeName="opacity" values="1;.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="94" y="76" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="13" font-weight="600" letter-spacing="2" fill="#84cc16">FULL STACK DEVELOPER</text>
+
+  <text x="58" y="160" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="800" fill="#ffffff">Andreu Zapater</text>
+  <text x="58" y="222" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="800" fill="url(#name)">Fillat</text>
+  <text x="60" y="262" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#a3a3a3">Head of Digital · OK24Horas</text>
+  <rect x="60" y="290" width="71" height="30" rx="15" fill="#84cc16" fill-opacity=".1" stroke="#84cc16" stroke-opacity=".45"/><text x="96" y="310" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#d9f99d">React</text><rect x="141.0" y="290" width="88" height="30" rx="15" fill="#84cc16" fill-opacity=".1" stroke="#84cc16" stroke-opacity=".45"/><text x="185" y="310" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#d9f99d">Laravel</text><rect x="239.2" y="290" width="114" height="30" rx="15" fill="#84cc16" fill-opacity=".1" stroke="#84cc16" stroke-opacity=".45"/><text x="296" y="310" text-anchor="middle" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="600" fill="#d9f99d">TypeScript</text>
+
+  <!-- Terminal -->
+  <rect x="672" y="56" width="476" height="264" rx="12" fill="#0f150f" fill-opacity=".92" stroke="#ffffff" stroke-opacity=".1"/>
+  <path d="M684 56h452a12 12 0 0 1 12 12v24H672V68a12 12 0 0 1 12-12z" fill="#182018"/>
+  <circle cx="692" cy="74" r="6" fill="#ff5f57"/>
+  <circle cx="712" cy="74" r="6" fill="#febc2e"/>
+  <circle cx="732" cy="74" r="6" fill="#28c840"/>
+  <text x="910" y="79" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="12" fill="#737373">andreu@ok24horas: ~</text>
+  <clipPath id="c0"><rect x="700" y="110" width="0" height="26"><animate attributeName="width" from="0" to="76" begin="0.60s" dur="0.50s" fill="freeze"/></rect></clipPath><text x="700" y="128" clip-path="url(#c0)" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="15"><tspan fill="#84cc16">$</tspan> <tspan fill="#f5f5f5">whoami</tspan></text><clipPath id="c1"><rect x="700" y="140" width="0" height="26"><animate attributeName="width" from="0" to="236" begin="1.45s" dur="0.01s" fill="freeze"/></rect></clipPath><text x="700" y="158" clip-path="url(#c1)" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="15"><tspan fill="#a3a3a3">andreu — head of digital</tspan></text><clipPath id="c2"><rect x="700" y="170" width="0" height="26"><animate attributeName="width" from="0" to="139" begin="1.71s" dur="0.78s" fill="freeze"/></rect></clipPath><text x="700" y="188" clip-path="url(#c2)" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="15"><tspan fill="#84cc16">$</tspan> <tspan fill="#f5f5f5">cat stack.txt</tspan></text><clipPath id="c3"><rect x="700" y="200" width="0" height="26"><animate attributeName="width" from="0" to="353" begin="2.84s" dur="0.01s" fill="freeze"/></rect></clipPath><text x="700" y="218" clip-path="url(#c3)" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="15"><tspan fill="#a3a3a3">React · Laravel · TypeScript · Docker</tspan></text><clipPath id="c4"><rect x="700" y="230" width="0" height="26"><animate attributeName="width" from="0" to="247" begin="3.10s" dur="1.50s" fill="freeze"/></rect></clipPath><text x="700" y="248" clip-path="url(#c4)" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="15"><tspan fill="#84cc16">$</tspan> <tspan fill="#f5f5f5">git checkout -b migration</tspan></text><clipPath id="c5"><rect x="700" y="260" width="0" height="26"><animate attributeName="width" from="0" to="245" begin="4.95s" dur="0.01s" fill="freeze"/></rect></clipPath><text x="700" y="278" clip-path="url(#c5)" font-family="ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace" font-size="15"><tspan fill="#84cc16">ASP.NET → React + Laravel</tspan></text>
+  <rect x="949" y="264" width="9" height="18" fill="#84cc16" opacity="0"><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.01;.5;.51" dur="1.1s" begin="5.21s" repeatCount="indefinite"/></rect>
+</svg>

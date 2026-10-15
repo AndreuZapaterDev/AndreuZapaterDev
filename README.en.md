@@ -1,18 +1,12 @@
 <!-- English version of README.md — keep both files in sync. -->
 
 <p align="right">
-  <a href="README.md">🇪🇸 Español</a> · 🇬🇧 English
+  <a href="README.md">Español</a> · <b>English</b>
 </p>
 
 <!-- ====================== HEADER ====================== -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f0a,50:166534,100:84cc16&height=200&section=header&text=Andreu%20Zapater%20Fillat&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=58&descSize=18" alt="Andreu Zapater Fillat — Full Stack Developer" width="100%"/>
-</p>
-
-<p align="center">
-  <a href="https://github.com/AndreuZapaterDev">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3500&pause=800&color=65a30d&center=true&vCenter=true&width=600&lines=Head+of+Digital+%40+OK24Horas;Full+Stack+Developer+%7C+React+%C2%B7+Laravel+%C2%B7+TypeScript;Migrating+ASP.NET+%E2%86%92+React+%2B+Laravel" alt="Head of Digital at OK24Horas · Full Stack Developer"/>
-  </a>
+  <img src="assets/header-en.svg" width="100%" alt="Andreu Zapater Fillat — Full Stack Developer · Head of Digital at OK24Horas"/>
 </p>
 
 <p align="center">
@@ -29,7 +23,7 @@
 <br/>
 
 <!-- ====================== 01 · ABOUT ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:a3e635&height=56&text=01%20%E2%80%94%20About%20me&fontSize=22&fontColor=ffffff&fontAlign=13&fontAlignY=55" width="100%" alt="01 — About me"/>
+<img src="assets/sections/en-01.svg" width="100%" alt="01 — About me"/>
 
 <table>
   <tr>
@@ -57,10 +51,13 @@ const andreu = {
   </tr>
 </table>
 
+> [!TIP]
+> **Currently** · Migrating a web application from **ASP.NET** to **React + Laravel** at OK24Horas.
+
 <br/>
 
 <!-- ====================== 02 · EXPERIENCE ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:84cc16&height=56&text=02%20%E2%80%94%20Experience&fontSize=22&fontColor=ffffff&fontAlign=14&fontAlignY=55" width="100%" alt="02 — Experience"/>
+<img src="assets/sections/en-02.svg" width="100%" alt="02 — Experience"/>
 
 <table>
   <tr>
@@ -74,14 +71,11 @@ const andreu = {
       Leading the company's digital area: project coordination, digital strategy and
       oversight of technical development.
       <br/><br/>
-      🔭 <b>Currently:</b> migrating a web application from <b>ASP.NET</b> to <b>React + Laravel</b>.
-      <br/><br/>
+      <img src="https://img.shields.io/badge/Internal_promotion-0a0f0a?style=flat-square" alt="Internal promotion"/>
       <img src="https://img.shields.io/badge/ASP.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="ASP.NET"/>
       <b>→</b>
       <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
       <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel"/>
-      <br/><br/>
-      <img src="https://img.shields.io/badge/Internal_promotion-0a0f0a?style=flat-square&logo=rocket&logoColor=84cc16" alt="Internal promotion"/>
       <br/><br/>
     </td>
   </tr>
@@ -113,7 +107,7 @@ const andreu = {
 <br/>
 
 <!-- ====================== 03 · STACK ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:4ade80&height=56&text=03%20%E2%80%94%20Tech%20stack&fontSize=22&fontColor=ffffff&fontAlign=14&fontAlignY=55" width="100%" alt="03 — Tech stack"/>
+<img src="assets/sections/en-03.svg" width="100%" alt="03 — Tech stack"/>
 
 <div align="center">
 
@@ -152,15 +146,15 @@ const andreu = {
 <br/>
 
 <!-- ====================== 04 · PROJECTS ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:22c55e&height=56&text=04%20%E2%80%94%20Featured%20projects&fontSize=22&fontColor=ffffff&fontAlign=18&fontAlignY=55" width="100%" alt="04 — Featured projects"/>
+<img src="assets/sections/en-04.svg" width="100%" alt="04 — Featured projects"/>
 
 <table>
   <tr>
     <td>
       <a href="https://www.xixauxas.es">
-        <img src="https://capsule-render.vercel.app/api?type=venom&color=0:052e16,100:22c55e&height=140&text=Xixauxas&fontSize=44&fontColor=ffffff&animation=fadeIn&desc=League%20of%20Legends%20Coaching%20Platform&descSize=15&descAlignY=72" width="100%" alt="Xixauxas — League of Legends Coaching Platform"/>
+        <img src="assets/xixauxas-preview.png" width="100%" alt="Screenshot of xixauxas.es"/>
       </a>
-      <br/>
+      <h3>Xixauxas</h3>
       <b>Personal project</b> built with <b>React</b>: a web platform for a
       <b>League of Legends streamer and coach</b> to
       <b>manage and promote coaching sessions</b> to their community of followers.
@@ -180,7 +174,7 @@ const andreu = {
 <br/>
 
 <!-- ====================== 05 · LANGUAGES ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:10b981&height=56&text=05%20%E2%80%94%20Languages&fontSize=22&fontColor=ffffff&fontAlign=13&fontAlignY=55" width="100%" alt="05 — Languages"/>
+<img src="assets/sections/en-05.svg" width="100%" alt="05 — Languages"/>
 
 <table>
   <tr>
@@ -208,7 +202,7 @@ const andreu = {
 <br/>
 
 <!-- ====================== 06 · CERTIFICATIONS ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:14b8a6&height=56&text=06%20%E2%80%94%20Certifications&fontSize=22&fontColor=ffffff&fontAlign=16&fontAlignY=55" width="100%" alt="06 — Certifications"/>
+<img src="assets/sections/en-06.svg" width="100%" alt="06 — Certifications"/>
 
 <table>
   <tr>
@@ -261,7 +255,7 @@ const andreu = {
 <br/>
 
 <!-- ====================== 07 · ACTIVITY ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:0d9488&height=56&text=07%20%E2%80%94%20GitHub%20activity&fontSize=22&fontColor=ffffff&fontAlign=17&fontAlignY=55" width="100%" alt="07 — GitHub activity"/>
+<img src="assets/sections/en-07.svg" width="100%" alt="07 — GitHub activity"/>
 
 <p align="center">
   <picture>
@@ -272,5 +266,5 @@ const andreu = {
 
 <!-- ====================== FOOTER ====================== -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:84cc16,50:166534,100:0a0f0a&height=120&section=footer&text=Thanks%20for%20stopping%20by&fontSize=18&fontColor=ffffff&fontAlignY=72" width="100%" alt=""/>
+  <img src="assets/footer-en.svg" width="100%" alt="Thanks for stopping by"/>
 </p>

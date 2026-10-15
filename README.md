@@ -11,23 +11,19 @@
   07 Actividad ......... #0d9488
   Fondo oscuro común ... #0a0f0a
 
+  Los SVG de assets/ (cabecera, barras de sección y pie) son propios.
+  Para regenerarlos tras cambiar textos o colores: python scripts/gen_svgs.py assets
   Las imágenes de "Actividad" las genera .github/workflows/profile-assets.yml
   en la rama `output`.
 -->
 
 <p align="right">
-  🇪🇸 Español · <a href="README.en.md">🇬🇧 English</a>
+  <b>Español</b> · <a href="README.en.md">English</a>
 </p>
 
 <!-- ====================== CABECERA ====================== -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f0a,50:166534,100:84cc16&height=200&section=header&text=Andreu%20Zapater%20Fillat&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=58&descSize=18" alt="Andreu Zapater Fillat — Full Stack Developer" width="100%"/>
-</p>
-
-<p align="center">
-  <a href="https://github.com/AndreuZapaterDev">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3500&pause=800&color=65a30d&center=true&vCenter=true&width=600&lines=Jefe+del+Departamento+Digital+%40+OK24Horas;Full+Stack+Developer+%7C+React+%C2%B7+Laravel+%C2%B7+TypeScript;Migrando+ASP.NET+%E2%86%92+React+%2B+Laravel" alt="Jefe del Departamento Digital en OK24Horas · Full Stack Developer"/>
-  </a>
+  <img src="assets/header-es.svg" width="100%" alt="Andreu Zapater Fillat — Full Stack Developer · Jefe del Departamento Digital en OK24Horas"/>
 </p>
 
 <p align="center">
@@ -44,7 +40,7 @@
 <br/>
 
 <!-- ====================== 01 · SOBRE MÍ ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:a3e635&height=56&text=01%20%E2%80%94%20Sobre%20m%C3%AD&fontSize=22&fontColor=ffffff&fontAlign=13&fontAlignY=55" width="100%" alt="01 — Sobre mí"/>
+<img src="assets/sections/es-01.svg" width="100%" alt="01 — Sobre mí"/>
 
 <table>
   <tr>
@@ -72,10 +68,13 @@ const andreu = {
   </tr>
 </table>
 
+> [!TIP]
+> **Ahora mismo** · Migrando una aplicación web de **ASP.NET** a **React + Laravel** en OK24Horas.
+
 <br/>
 
 <!-- ====================== 02 · TRAYECTORIA ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:84cc16&height=56&text=02%20%E2%80%94%20Trayectoria&fontSize=22&fontColor=ffffff&fontAlign=14&fontAlignY=55" width="100%" alt="02 — Trayectoria"/>
+<img src="assets/sections/es-02.svg" width="100%" alt="02 — Trayectoria"/>
 
 <table>
   <tr>
@@ -89,14 +88,11 @@ const andreu = {
       Dirección del área digital de la compañía: coordinación de proyectos, definición de
       la estrategia digital y supervisión del desarrollo técnico.
       <br/><br/>
-      🔭 <b>Ahora mismo:</b> migrando una aplicación web de <b>ASP.NET</b> a <b>React + Laravel</b>.
-      <br/><br/>
+      <img src="https://img.shields.io/badge/Promoción_interna-0a0f0a?style=flat-square" alt="Promoción interna"/>
       <img src="https://img.shields.io/badge/ASP.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="ASP.NET"/>
       <b>→</b>
       <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
       <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel"/>
-      <br/><br/>
-      <img src="https://img.shields.io/badge/Promoción_interna-0a0f0a?style=flat-square&logo=rocket&logoColor=84cc16" alt="Promoción interna"/>
       <br/><br/>
     </td>
   </tr>
@@ -129,7 +125,7 @@ const andreu = {
 <br/>
 
 <!-- ====================== 03 · STACK ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:4ade80&height=56&text=03%20%E2%80%94%20Stack%20tecnol%C3%B3gico&fontSize=22&fontColor=ffffff&fontAlign=18&fontAlignY=55" width="100%" alt="03 — Stack tecnológico"/>
+<img src="assets/sections/es-03.svg" width="100%" alt="03 — Stack tecnológico"/>
 
 <div align="center">
 
@@ -168,15 +164,15 @@ const andreu = {
 <br/>
 
 <!-- ====================== 04 · PROYECTOS ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:22c55e&height=56&text=04%20%E2%80%94%20Proyectos%20destacados&fontSize=22&fontColor=ffffff&fontAlign=20&fontAlignY=55" width="100%" alt="04 — Proyectos destacados"/>
+<img src="assets/sections/es-04.svg" width="100%" alt="04 — Proyectos destacados"/>
 
 <table>
   <tr>
     <td>
       <a href="https://www.xixauxas.es">
-        <img src="https://capsule-render.vercel.app/api?type=venom&color=0:052e16,100:22c55e&height=140&text=Xixauxas&fontSize=44&fontColor=ffffff&animation=fadeIn&desc=League%20of%20Legends%20Coaching%20Platform&descSize=15&descAlignY=72" width="100%" alt="Xixauxas — League of Legends Coaching Platform"/>
+        <img src="assets/xixauxas-preview.png" width="100%" alt="Captura de la web xixauxas.es"/>
       </a>
-      <br/>
+      <h3>Xixauxas</h3>
       <b>Proyecto personal</b> desarrollado con <b>React</b>: plataforma web para un
       <b>streamer y coach de League of Legends</b> que le permite
       <b>gestionar y promocionar sus sesiones de coaching</b> entre su comunidad de seguidores.
@@ -196,7 +192,7 @@ const andreu = {
 <br/>
 
 <!-- ====================== 05 · IDIOMAS ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:10b981&height=56&text=05%20%E2%80%94%20Idiomas&fontSize=22&fontColor=ffffff&fontAlign=11&fontAlignY=55" width="100%" alt="05 — Idiomas"/>
+<img src="assets/sections/es-05.svg" width="100%" alt="05 — Idiomas"/>
 
 <table>
   <tr>
@@ -224,7 +220,7 @@ const andreu = {
 <br/>
 
 <!-- ====================== 06 · CERTIFICACIONES ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:14b8a6&height=56&text=06%20%E2%80%94%20Certificaciones&fontSize=22&fontColor=ffffff&fontAlign=16&fontAlignY=55" width="100%" alt="06 — Certificaciones"/>
+<img src="assets/sections/es-06.svg" width="100%" alt="06 — Certificaciones"/>
 
 <table>
   <tr>
@@ -277,7 +273,7 @@ const andreu = {
 <br/>
 
 <!-- ====================== 07 · ACTIVIDAD ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:0d9488&height=56&text=07%20%E2%80%94%20Actividad%20en%20GitHub&fontSize=22&fontColor=ffffff&fontAlign=19&fontAlignY=55" width="100%" alt="07 — Actividad en GitHub"/>
+<img src="assets/sections/es-07.svg" width="100%" alt="07 — Actividad en GitHub"/>
 
 <p align="center">
   <picture>
@@ -288,5 +284,5 @@ const andreu = {
 
 <!-- ====================== PIE ====================== -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:84cc16,50:166534,100:0a0f0a&height=120&section=footer&text=Gracias%20por%20pasarte&fontSize=18&fontColor=ffffff&fontAlignY=72" width="100%" alt=""/>
+  <img src="assets/footer-es.svg" width="100%" alt="Gracias por pasarte"/>
 </p>
