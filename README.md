@@ -1,268 +1,147 @@
-# <div align="center">👨‍💻 ANDREU ZAPATER FILLAT</div>
+<!-- ====================== CABECERA ====================== -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1e3a8a,100:2563eb&height=200&section=header&text=Andreu%20Zapater%20Fillat&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=58&descSize=18" alt="Andreu Zapater Fillat" width="100%"/>
+</p>
 
-<div align="center">
-  
-  <img src="https://img.shields.io/badge/Fullstack%20Developer-brightgreen?style=for-the-badge" alt="Fullstack Developer" />
-  <img src="https://img.shields.io/badge/Age-22-blue?style=for-the-badge" alt="Age" />
-  <img src="https://img.shields.io/badge/Experience-1%20Year-orange?style=for-the-badge" alt="Experience" />
-
-</div>
-
-<div align="center">
-  <a href="https://linkedin.com/in/andreuzapater">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://twitter.com/AndreuZapaterDev">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
-  </a>
-  <a href="mailto:andreu.zapater@example.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-</div>
-
-<div align="center">
-  
-  <h2>✨ ¡Hola, Mundo! Soy @AndreuZapaterDev ✨</h2>
-  <p><i>Desarrollador Fullstack apasionado por crear soluciones innovadoras y eficientes que transforman ideas en experiencias digitales excepcionales</i></p>
-  
-</div>
-
-<hr>
-
-<table align="center" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td valign="top" width="50%">
-      
-### 👨‍💻 Sobre mí
-
-- 🏢 **Fullstack Developer** en el equipo de [**Rodi Motors**](https://www.rodi.es/) en [**OK24**](https://www.ok24horas.com)
-- 🎓 Graduado en **Desarrollo de Aplicaciones Web**
-- 🌐 Nivel **B2** de inglés certificado por Cambridge
-- 👀 Especializado en diseño responsive y arquitecturas escalables
-- 🔭 Investigando sobre **microservicios** y **cloud computing**
-- 🌱 Ampliando conocimientos en **React Native** y **AWS**
-- 💞️ Buscando colaborar en proyectos de impacto social y tecnológico
-- 🎯 Enfocado en desarrollar software intuitivo y de alta calidad
-- 🏃‍♂️ Aficionado a los **deportes** y la **tecnología emergente**
-- 🧠 Filosofía: **"Código limpio, soluciones elegantes"**
-
-    </td>
-    <td valign="top" width="50%">
-
-### 🚀 Stack Tecnológico
-
-<div align="center">
-  
-#### Frontend
-  <p>
-    <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-    <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-    <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
-    <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" alt="Angular" />
-    <img src="https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind" />
-  </p>
-
-#### Backend
-  <p>
-    <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP" />
-    <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel" />
-  </p>
-
-#### Bases de datos
-  <p>
-    <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" alt="MySQL" />
-    <img src="https://img.shields.io/badge/OracleSQL-F80000?style=flat-square&logo=oracle&logoColor=white" alt="Oracle" />
-  </p>
-
-#### Herramientas & DevOps
-  <p>
-    <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" />
-    <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-    <img src="https://img.shields.io/badge/MatLab-0076A8?style=flat-square&logo=mathworks&logoColor=white" alt="MatLab" />
-    <img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white" alt="VS Code" />
-  </p>
-</div>
-    </td>
-  </tr>
-</table>
-
-<hr>
-
-<h2 align="center">🌟 PROYECTOS DESTACADOS</h2>
-
-<div align="center">
-  <table align="center" border="0" cellspacing="0" cellpadding="10">
-    <tr>
-      <td align="center">
-        <a href="https://github.com/AndreuZapaterDev/amazont">
-          <img src="https://via.placeholder.com/150?text=Amazon't" width="120" alt="Amazon't E-commerce"/>
-          <br />
-          <b>Amazon't</b>
-        </a>
-        <br />
-        <span style="background-color: #DD0031; color: white; padding: 2px 5px; border-radius: 3px;">Angular</span>
-        <span style="background-color: #FF2D20; color: white; padding: 2px 5px; border-radius: 3px;">Laravel</span>
-        <span style="background-color: #38B2AC; color: white; padding: 2px 5px; border-radius: 3px;">Tailwind</span>
-        <br />
-        <sub>🏆 Plataforma e-commerce inspirada en Amazon con pasarela de pagos y panel de administración.</sub>
-      </td>
-      <!-- Puedes agregar más proyectos aquí siguiendo el mismo formato -->
-    </tr>
-  </table>
-</div>
-
-<hr>
-
-<h2 align="center">📊 ESTADÍSTICAS DE GITHUB</h2>
-
-<div align="center">
-  
-  <img src="https://github-readme-stats.vercel.app/api?username=AndreuZapaterDev&show_icons=true&theme=tokyonight&hide_border=true&border_radius=15" alt="GitHub Stats" height="170" />
-  
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AndreuZapaterDev&theme=tokyonight&hide_border=true&border_radius=15" alt="GitHub Streak" height="170" />
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreuZapaterDev&layout=compact&theme=tokyonight&hide_border=true&border_radius=15" alt="Top Languages" height="170" />
-  
-</div>
-
-<hr>
-
-<h2 align="center">🎓 FORMACIÓN Y CERTIFICACIONES</h2>
-
-<div align="center">
-  <table align="center" border="0" cellspacing="0" cellpadding="5">
-    <tr>
-      <td><b>C1 en EFSET</b></td>
-      <td><a href="https://cert.efset.org/YjF4mA">Ver certificado</a></td>
-    </tr>
-    <tr>
-      <td><b>B2 de inglés</b></td>
-      <td>Cambridge Certificate</td>
-    </tr>
-    <tr>
-      <td><b>Competencias digitales para profesionales</b></td>
-      <td><a href="https://skillshop.exceedlms.com/student/award/885R6WYRgqz8ZjDSTvqTJ22e">Google Skillshop</a></td>
-    </tr>
-    <tr>
-      <td><b>Productividad Personal</b></td>
-      <td><a href="https://skillshop.exceedlms.com/student/award/466kx7XcQm9GaTJmx551tLEr">Google Skillshop</a></td>
-    </tr>
-    <tr>
-      <td><b>Curso de introducción al desarrollo web: HTML y CSS (1/2)</b></td>
-      <td><a href="https://skillshop.exceedlms.com/student/award/JyNpgpNz1V2sxGqbp1dhiYys">Google Skillshop</a></td>
-    </tr>
-    <tr>
-      <td><b>Curso de introducción al desarrollo web: HTML y CSS (2/2)</b></td>
-      <td><a href="https://skillshop.exceedlms.com/student/award/SDWE51yRTBmXGwGrntJnsRad">Google Skillshop</a></td>
-    </tr>
-  </table>
-</div>
-
-<hr>
-
-<h2 align="center">🗣️ IDIOMAS</h2>
-
-<div align="center">
-  <table align="center" border="0" cellspacing="0" cellpadding="10">
-    <tr>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Español-Nativo-success?style=for-the-badge" alt="Español" />
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Inglés-C1%20/%20B2-blue?style=for-the-badge" alt="Inglés" />
-      </td>
-      <td align="center">
-        <img src="https://img.shields.io/badge/Catalán-Nativo-success?style=for-the-badge" alt="Catalán" />
-      </td>
-    </tr>
-  </table>
-</div>
-
-<hr>
-
-<h2 align="center">⚡ HABILIDADES DESTACADAS</h2>
-
-<table align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr>
-    <th align="center" bgcolor="#4c566a">Desarrollo Frontend</th>
-    <th align="center" bgcolor="#4c566a">Desarrollo Backend</th>
-    <th align="center" bgcolor="#4c566a">Soft Skills</th>
-  </tr>
-  <tr>
-    <td align="center">💻 Desarrollo Responsive</td>
-    <td align="center">🔌 API RESTful</td>
-    <td align="center">👥 Trabajo en equipo</td>
-  </tr>
-  <tr>
-    <td align="center">🎨 UI/UX Design</td>
-    <td align="center">🧩 OOP & SOLID</td>
-    <td align="center">🔍 Resolución de problemas</td>
-  </tr>
-  <tr>
-    <td align="center">📱 Single Page Apps</td>
-    <td align="center">🏗️ Arquitectura MVC</td>
-    <td align="center">🗣️ Comunicación efectiva</td>
-  </tr>
-  <tr>
-    <td align="center">⚡ Performance Optimization</td>
-    <td align="center">🔒 Seguridad Web</td>
-    <td align="center">⏱️ Autogestión</td>
-  </tr>
-  <tr>
-    <td align="center">🧪 Testing (Jest, Cypress)</td>
-    <td align="center">🚀 Integración CI/CD</td>
-    <td align="center">👨‍🏫 Mentoría</td>
-  </tr>
-</table>
-
-<hr>
-
-<h2 align="center">📫 CONECTA CONMIGO</h2>
-
-<div align="center">
-  
-  <a href="https://linkedin.com/in/andreuzapater">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://twitter.com/AndreuZapaterDev">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
-  </a>
+<p align="center">
   <a href="https://github.com/AndreuZapaterDev">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3500&pause=800&color=2563EB&center=true&vCenter=true&width=600&lines=Jefe+del+Departamento+Digital+%40+OK24Horas;Full+Stack+Developer+%7C+React+%C2%B7+Laravel+%C2%B7+TypeScript;3+a%C3%B1os+construyendo+productos+web" alt="Typing SVG"/>
   </a>
-  <a href="mailto:andreu.zapater@example.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://andreuzapater.dev">
-    <img src="https://img.shields.io/badge/Portfolio-1E88E5?style=for-the-badge&logo=firefox-browser&logoColor=white" alt="Portfolio" />
-  </a>
-  
-</div>
+</p>
 
-<br>
+<p align="center">
+  <a href="mailto:andreuzapaterdev@gmail.com"><img src="https://img.shields.io/badge/Gmail-andreuzapaterdev-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+  <!-- Sustituye TU-USUARIO por tu perfil de LinkedIn -->
+  <a href="https://www.linkedin.com/in/TU-USUARIO/"><img src="https://img.shields.io/badge/LinkedIn-Andreu%20Zapater-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="https://www.xixauxas.es"><img src="https://img.shields.io/badge/Portfolio-xixauxas.es-111827?style=flat-square&logo=googlechrome&logoColor=white" alt="Proyecto"/></a>
+  <img src="https://komarev.com/ghpvc/?username=AndreuZapaterDev&style=flat-square&color=2563eb&label=Visitas" alt="Visitas"/>
+</p>
 
-<div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random Quote" />
-</div>
+<br/>
 
-<hr>
+<!-- ====================== SOBRE MÍ ====================== -->
+## 👨‍💻 Sobre mí
 
-<div align="center">
-  <a href="https://www.buymeacoffee.com/andreuzapater">
-    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" />
-  </a>
-</div>
+Desarrollador **Full Stack** con **3 años de experiencia** creando aplicaciones web de principio a fin, desde la interfaz hasta la base de datos. Actualmente lidero el **Departamento Digital de OK24Horas** (Grupo RODI), donde combino el desarrollo con la gestión de proyectos y equipos.
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=AndreuZapaterDev&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
-  <br>
-  <sub>💻 Diseñado con ❤️ por AndreuZapaterDev | Última actualización: Marzo 2025</sub>
-</div>
+```ts
+const andreu = {
+  rol:        "Full Stack Developer · Jefe del Departamento Digital",
+  empresa:    "OK24Horas — Grupo RODI",
+  formacion:  "Grado Superior en Desarrollo de Aplicaciones Web (DAW)",
+  experiencia: "3 años",
+  idiomas:    ["Español (nativo)", "Catalán (nativo)", "Inglés (B2 · C1 EF SET)"],
+  contacto:   "andreuzapaterdev@gmail.com",
+};
+```
 
-<!---
-AndreuZapaterDev/AndreuZapaterDev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+<br/>
+
+<!-- ====================== STACK ====================== -->
+## 🛠️ Stack tecnológico
+
+<table>
+  <tr>
+    <td align="center" width="140"><b>Frontend</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+      <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"/>
+      <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+      <img src="https://img.shields.io/badge/Tailwind_CSS-0F172A?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8"/>
+      <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Backend</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"/>
+      <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white"/>
+      <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/>
+      <img src="https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>Bases de datos</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
+      <img src="https://img.shields.io/badge/Oracle_SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><b>DevOps & Tools</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+      <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+      <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+    </td>
+  </tr>
+</table>
+
+<sub>Angular y MATLAB a nivel básico.</sub>
+
+<br/><br/>
+
+<!-- ====================== PROYECTOS ====================== -->
+## 🚀 Proyectos destacados
+
+<table>
+  <tr>
+    <td width="100%">
+      <h3>🎮 <a href="https://www.xixauxas.es">Xixauxas</a></h3>
+      <p>
+        Plataforma web para un <b>streamer y coach de League of Legends</b> que le permite
+        <b>gestionar y promocionar sus sesiones de coaching</b> entre su comunidad de seguidores.
+      </p>
+      <p>
+        <a href="https://www.xixauxas.es"><img src="https://img.shields.io/badge/Ver_web-xixauxas.es-2563EB?style=flat-square&logo=googlechrome&logoColor=white" alt="Ver web"/></a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<!-- ====================== IDIOMAS ====================== -->
+## 🌍 Idiomas
+
+<p>
+  <img src="https://img.shields.io/badge/Español-Nativo-2563EB?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Català-Nativo-2563EB?style=flat-square"/>
+  <img src="https://img.shields.io/badge/English-B2_·_C1_EF_SET-2563EB?style=flat-square"/>
+</p>
+
+<br/>
+
+<!-- ====================== CERTIFICACIONES ====================== -->
+## 📜 Certificaciones
+
+| Certificación | Emisor | Credencial |
+| :--- | :---: | :---: |
+| **Inglés C1** | EF SET | [![Ver](https://img.shields.io/badge/Ver-2563EB?style=flat-square)](https://cert.efset.org/YjF4mA) |
+| **Inglés B2** | Escuela Oficial de Idiomas | — |
+| **Competencias digitales para profesionales** | Google Skillshop | [![Ver](https://img.shields.io/badge/Ver-2563EB?style=flat-square)](https://skillshop.exceedlms.com/student/award/885R6WYRgqz8ZjDSTvqTJ22e) |
+| **Productividad personal** | Google Skillshop | [![Ver](https://img.shields.io/badge/Ver-2563EB?style=flat-square)](https://skillshop.exceedlms.com/student/award/466kx7XcQm9GaTJmx551tLEr) |
+| **Introducción al desarrollo web: HTML y CSS (1/2)** | Google Skillshop | [![Ver](https://img.shields.io/badge/Ver-2563EB?style=flat-square)](https://skillshop.exceedlms.com/student/award/JyNpgpNz1V2sxGqbp1dhiYys) |
+| **Introducción al desarrollo web: HTML y CSS (2/2)** | Google Skillshop | [![Ver](https://img.shields.io/badge/Ver-2563EB?style=flat-square)](https://skillshop.exceedlms.com/student/award/SDWE51yRTBmXGwGrntJnsRad) |
+
+<br/>
+
+<!-- ====================== ESTADÍSTICAS ====================== -->
+## 📊 Actividad en GitHub
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=AndreuZapaterDev&show_icons=true&hide_border=true&bg_color=0f172a&title_color=60a5fa&icon_color=2563eb&text_color=cbd5e1&rank_icon=github" alt="GitHub stats" height="170"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreuZapaterDev&layout=compact&hide_border=true&bg_color=0f172a&title_color=60a5fa&text_color=cbd5e1" alt="Lenguajes más usados" height="170"/>
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=AndreuZapaterDev&hide_border=true&background=0f172a&ring=2563eb&fire=60a5fa&currStreakLabel=60a5fa&sideLabels=cbd5e1&currStreakNum=ffffff&sideNums=ffffff&dates=94a3b8&locale=es" alt="Racha de contribuciones"/>
+</p>
+
+<!-- ====================== PIE ====================== -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563eb,50:1e3a8a,100:0f172a&height=120&section=footer" width="100%"/>
+</p>
