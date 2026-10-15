@@ -210,4 +210,170 @@ def footer(text):
 
 write("footer-es.svg", footer("Gracias por pasarte"))
 write("footer-en.svg", footer("Thanks for stopping by"))
+
+
+# ---------------------------------------------------------------- stack
+# Logos de Simple Icons (CC0) guardados en scripts/icons/
+ICON_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "icons")
+
+
+def brand_path(slug):
+    import re
+    with open(os.path.join(ICON_DIR, f"{slug}.svg"), encoding="utf-8") as f:
+        return re.search(r'<path d="([^"]+)"', f.read()).group(1)
+
+
+# (slug, nombre, color de marca legible sobre fondo oscuro)
+STACK = [
+    ("FRONTEND", [("html5", "HTML5", "#E34F26"), ("css3", "CSS3", "#2965F1"),
+                  ("javascript", "JavaScript", "#F7DF1E"), ("typescript", "TypeScript", "#3178C6"),
+                  ("react", "React", "#61DAFB"), ("tailwindcss", "Tailwind CSS", "#06B6D4"),
+                  ("angular", "Angular", "#DD0031")]),
+    ("BACKEND", [("php", "PHP", "#8892BF"), ("laravel", "Laravel", "#FF2D20"),
+                 ("openjdk", "Java", "#ED8B00")]),
+    ("DATA", [("mysql", "MySQL", "#5D9CC9"), ("postgresql", "PostgreSQL", "#6B8FE8"),
+              ("oracle", "Oracle", "#F80000")]),
+    ("DEVOPS", [("git", "Git", "#F05032"), ("github", "GitHub", "#ffffff"),
+                ("docker", "Docker", "#2496ED")]),
+]
+
+
+def stack_svg(titles, basic_label):
+    color = "#4ade80"
+    gap, ph = 12, 126
+    # Fila 1: Frontend a todo el ancho · Fila 2: Backend, Datos y DevOps en 3 columnas
+    col_w = (1200 - 2 * gap) / 3
+    layout = [(0, 0, 1200), (0, ph + gap, col_w), (col_w + gap, ph + gap, col_w),
+              (2 * (col_w + gap), ph + gap, col_w)]
+    out = []
+    for (key, items), (px, py, pw) in zip(STACK, layout):
+        out.append(
+            f'<rect x="{px + .5:.1f}" y="{py + .5}" width="{pw - 1:.1f}" height="{ph - 1}" rx="16" fill="{BG}" stroke="{color}" stroke-opacity=".28"/>'
+            f'<text x="{px + 20:.0f}" y="{py + 36}" font-family="{MONO}" font-size="13" font-weight="700" letter-spacing="2" fill="{color}">{escape(titles[key])}</text>'
+            f'<text x="{px + pw - 20:.0f}" y="{py + 36}" text-anchor="end" font-family="{MONO}" font-size="13" fill="#525252">{len(items):02d}</text>'
+        )
+        cx, cy = px + 20, py + 60
+        for slug, name, bc in items:
+            extra = f" · {basic_label}" if slug == "angular" else ""
+            w = 44 + len(name) * 7.7 + len(extra) * 6.4 + 14
+            out.append(
+                f'<rect x="{cx:.0f}" y="{cy}" width="{w:.0f}" height="40" rx="10" fill="#111811" stroke="#ffffff" stroke-opacity=".08"/>'
+                f'<g transform="translate({cx + 13:.0f} {cy + 10}) scale(.8333)"><path d="{brand_path(slug)}" fill="{bc}"/></g>'
+                f'<text x="{cx + 44:.0f}" y="{cy + 26}" font-family="{SANS}" font-size="15" font-weight="600" fill="#f5f5f5">{escape(name)}'
+                + (f'<tspan fill="#737373" font-weight="400" font-size="13">{escape(extra)}</tspan>' if extra else "")
+                + '</text>'
+            )
+            cx += w + 8
+    h = 2 * ph + gap
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{h}" viewBox="0 0 1200 {h}" role="img" '
+            f'aria-label="Stack: HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Angular, PHP, Laravel, Java, MySQL, PostgreSQL, Oracle SQL, Git, GitHub, Docker">'
+            + "".join(out) + '</svg>\n')
+
+
+write("stack-es.svg", stack_svg(
+    {"FRONTEND": "FRONTEND", "BACKEND": "BACKEND", "DATA": "BASES DE DATOS", "DEVOPS": "DEVOPS & TOOLS"}, "básico"))
+write("stack-en.svg", stack_svg(
+    {"FRONTEND": "FRONTEND", "BACKEND": "BACKEND", "DATA": "DATABASES", "DEVOPS": "DEVOPS & TOOLS"}, "basic"))
+
+
+# ---------------------------------------------------------------- trayectoria
+def chip(x, y, text, color, filled=False):
+    w = len(text) * 7.4 + 24
+    fill = f'fill="{color}" fill-opacity=".14"' if filled else 'fill="#111811"'
+    return (f'<rect x="{x:.0f}" y="{y}" width="{w:.0f}" height="26" rx="13" {fill} stroke="{color}" stroke-opacity=".5"/>'
+            f'<text x="{x + w / 2:.0f}" y="{y + 17}" text-anchor="middle" font-family="{MONO}" font-size="12" font-weight="600" fill="{color}">{escape(text)}</text>'), w
+
+
+def timeline_svg(entries, label):
+    # entries: (pill, título, subtítulo, descripción | None, chips[], color, actual)
+    out, y, nodes = [], 20, []
+    for pill, title, sub, desc, chips, color, current in entries:
+        h = 102 + (30 if desc else 0) + (44 if chips else 0) + 26
+        ny = y + 34
+        nodes.append(ny)
+        out.append(f'<rect x="80.5" y="{y + .5}" width="1119" height="{h - 1}" rx="16" fill="{BG}" stroke="{color}" stroke-opacity=".3"/>')
+        if current:
+            out.append(
+                f'<circle cx="40" cy="{ny}" r="10" fill="none" stroke="{color}" stroke-width="2">'
+                f'<animate attributeName="r" values="10;22" dur="2s" repeatCount="indefinite"/>'
+                f'<animate attributeName="opacity" values=".8;0" dur="2s" repeatCount="indefinite"/></circle>')
+        out.append(f'<circle cx="40" cy="{ny}" r="{9 if current else 7}" fill="{color if current else BG}" stroke="{color}" stroke-width="3"/>')
+        p, pw_ = chip(104, y + 20, pill, color, filled=current)
+        out.append(p)
+        out.append(f'<text x="104" y="{y + 76}" font-family="{SANS}" font-size="24" font-weight="700" fill="#ffffff">{escape(title)}</text>')
+        out.append(f'<text x="104" y="{y + 102}" font-family="{SANS}" font-size="15" font-weight="600" fill="{color}">{escape(sub)}</text>')
+        ty = y + 102
+        if desc:
+            ty += 30
+            out.append(f'<text x="104" y="{ty}" font-family="{SANS}" font-size="15" fill="#a3a3a3">{escape(desc)}</text>')
+        if chips:
+            cx = 104
+            for c in chips:
+                s, w = chip(cx, ty + 18, c, "#d4d4d4")
+                out.append(s)
+                cx += w + 8
+        y += h + 20
+    line = (f'<defs><linearGradient id="tl" x1="0" y1="0" x2="0" y2="1">'
+            f'<stop offset="0" stop-color="{LIME}"/><stop offset="1" stop-color="#3f3f46"/></linearGradient></defs>'
+            f'<rect x="39" y="{nodes[0]}" width="2" height="{nodes[-1] - nodes[0]}" fill="url(#tl)"/>')
+    total = y
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{total}" viewBox="0 0 1200 {total}" role="img" aria-label="{escape(label)}">'
+            + line + "".join(out) + '</svg>\n')
+
+
+write("timeline-es.svg", timeline_svg([
+    ("● ACTUALIDAD", "Jefe del Departamento Digital", "OK24Horas · Grupo RODI",
+     "Coordinación de proyectos, estrategia digital y supervisión del desarrollo técnico.",
+     ["PROMOCIÓN INTERNA", "ASP.NET → REACT + LARAVEL"], LIME, True),
+    ("2 AÑOS", "Full Stack Developer", "OK24Horas · Grupo RODI",
+     "Desarrollo de aplicaciones web de extremo a extremo, desde la interfaz hasta la base de datos.",
+     [], "#65a30d", False),
+    ("FORMACIÓN", "Desarrollo de Aplicaciones Web (DAW)", "Ciclo Formativo de Grado Superior",
+     None, [], "#a3a3a3", False),
+], "Trayectoria: Jefe del Departamento Digital en OK24Horas (actualidad), Full Stack Developer en OK24Horas (2 años), Grado Superior en DAW"))
+
+write("timeline-en.svg", timeline_svg([
+    ("● PRESENT", "Head of Digital", "OK24Horas · Grupo RODI",
+     "Project coordination, digital strategy and oversight of technical development.",
+     ["INTERNAL PROMOTION", "ASP.NET → REACT + LARAVEL"], LIME, True),
+    ("2 YEARS", "Full Stack Developer", "OK24Horas · Grupo RODI",
+     "End-to-end web application development, from user interface to database.",
+     [], "#65a30d", False),
+    ("EDUCATION", "Web Application Development (DAW)", "Higher Vocational Training Degree (Spain)",
+     None, [], "#a3a3a3", False),
+], "Experience: Head of Digital at OK24Horas (present), Full Stack Developer at OK24Horas (2 years), Web Application Development degree"))
+
+
+# ---------------------------------------------------------------- idiomas
+def languages_svg(items, label):
+    color = "#10b981"
+    w, gap = 392, 12
+    out = []
+    for i, (code, name, level, score) in enumerate(items):
+        x = i * (w + gap)
+        out.append(
+            f'<rect x="{x + .5}" y=".5" width="{w - 1}" height="149" rx="16" fill="{BG}" stroke="{color}" stroke-opacity=".3"/>'
+            f'<text x="{x + w - 22}" y="58" text-anchor="end" font-family="{MONO}" font-size="44" font-weight="800" fill="{color}" fill-opacity=".14">{code}</text>'
+            f'<text x="{x + 24}" y="46" font-family="{SANS}" font-size="21" font-weight="700" fill="#ffffff">{escape(name)}</text>'
+            f'<text x="{x + 24}" y="74" font-family="{SANS}" font-size="14" fill="#a3a3a3">{escape(level)}</text>'
+        )
+        sw = (w - 48 - 4 * 8) / 5
+        for s in range(5):
+            on = s < score
+            out.append(
+                f'<rect x="{x + 24 + s * (sw + 8):.1f}" y="104" width="{sw:.1f}" height="8" rx="4" '
+                f'fill="{color if on else "#1f2a1f"}"/>')
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-label="{escape(label)}">'
+            + "".join(out) + '</svg>\n')
+
+
+write("languages-es.svg", languages_svg([
+    ("ES", "Español", "Nativo", 5), ("CA", "Català", "Nativo", 5),
+    ("EN", "English", "B2 · EOI  |  C1 · EF SET", 4)],
+    "Idiomas: español nativo, catalán nativo, inglés B2 (EOI) y C1 (EF SET)"))
+write("languages-en.svg", languages_svg([
+    ("ES", "Spanish", "Native", 5), ("CA", "Catalan", "Native", 5),
+    ("EN", "English", "B2 · EOI  |  C1 · EF SET", 4)],
+    "Languages: Spanish native, Catalan native, English B2 (EOI) and C1 (EF SET)"))
+
 print("ok")

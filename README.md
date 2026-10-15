@@ -11,7 +11,8 @@
   07 Actividad ......... #0d9488
   Fondo oscuro común ... #0a0f0a
 
-  Los SVG de assets/ (cabecera, barras de sección y pie) son propios.
+  Los SVG de assets/ (cabecera, barras, trayectoria, stack, idiomas y pie) son propios.
+  Los logos del stack son de Simple Icons (CC0) y están en scripts/icons/.
   Para regenerarlos tras cambiar textos o colores: python scripts/gen_svgs.py assets
   Las imágenes de "Actividad" las genera .github/workflows/profile-assets.yml
   en la rama `output`.
@@ -76,90 +77,18 @@ const andreu = {
 <!-- ====================== 02 · TRAYECTORIA ====================== -->
 <img src="assets/sections/es-02.svg" width="100%" alt="02 — Trayectoria"/>
 
-<table>
-  <tr>
-    <td width="30%" align="center" valign="top">
-      <br/>
-      <img src="https://img.shields.io/badge/●_Actualidad-84cc16?style=for-the-badge" alt="Actualidad"/>
-    </td>
-    <td valign="top">
-      <h3>Jefe del Departamento Digital</h3>
-      <b>OK24Horas</b> · Grupo RODI<br/><br/>
-      Dirección del área digital de la compañía: coordinación de proyectos, definición de
-      la estrategia digital y supervisión del desarrollo técnico.
-      <br/><br/>
-      <img src="https://img.shields.io/badge/Promoción_interna-0a0f0a?style=flat-square" alt="Promoción interna"/>
-      <img src="https://img.shields.io/badge/ASP.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="ASP.NET"/>
-      <b>→</b>
-      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
-      <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel"/>
-      <br/><br/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <br/>
-      <img src="https://img.shields.io/badge/2_años-4d7c0f?style=for-the-badge" alt="2 años"/>
-    </td>
-    <td valign="top">
-      <h3>Full Stack Developer</h3>
-      <b>OK24Horas</b> · Grupo RODI<br/><br/>
-      Desarrollo de aplicaciones web de extremo a extremo, desde la interfaz hasta la
-      base de datos.
-      <br/><br/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <br/>
-      <img src="https://img.shields.io/badge/Formación-3f3f46?style=for-the-badge" alt="Formación"/>
-    </td>
-    <td valign="top">
-      <h3>Desarrollo de Aplicaciones Web (DAW)</h3>
-      Ciclo Formativo de Grado Superior
-      <br/><br/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="assets/timeline-es.svg" width="100%" alt="Trayectoria: Jefe del Departamento Digital en OK24Horas (actualidad, promoción interna, migración ASP.NET a React + Laravel); Full Stack Developer en OK24Horas (2 años); Grado Superior en Desarrollo de Aplicaciones Web"/>
+</p>
 
 <br/>
 
 <!-- ====================== 03 · STACK ====================== -->
 <img src="assets/sections/es-03.svg" width="100%" alt="03 — Stack tecnológico"/>
 
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center" width="50%" valign="top">
-      <img src="https://img.shields.io/badge/FRONTEND-4ade80?style=for-the-badge" alt="Frontend"/><br/><br/>
-      <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,angular&perline=4&theme=dark" alt="HTML, CSS, JavaScript, TypeScript, React, Tailwind, Angular"/>
-      <br/><br/>
-    </td>
-    <td align="center" width="50%" valign="top">
-      <img src="https://img.shields.io/badge/BACKEND-4ade80?style=for-the-badge" alt="Backend"/><br/><br/>
-      <img src="https://skillicons.dev/icons?i=php,laravel,java&perline=4&theme=dark" alt="PHP, Laravel, Java"/>
-      <br/><br/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <img src="https://img.shields.io/badge/BASES_DE_DATOS-4ade80?style=for-the-badge" alt="Bases de datos"/><br/><br/>
-      <img src="https://skillicons.dev/icons?i=mysql,postgres&theme=dark" alt="MySQL, PostgreSQL"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="48" alt="Oracle SQL"/>
-      <br/><br/>
-    </td>
-    <td align="center" valign="top">
-      <img src="https://img.shields.io/badge/DEVOPS_&_TOOLS-4ade80?style=for-the-badge" alt="DevOps y herramientas"/><br/><br/>
-      <img src="https://skillicons.dev/icons?i=git,github,docker&theme=dark" alt="Git, GitHub, Docker"/>
-      <br/><br/>
-    </td>
-  </tr>
-</table>
-
-<sub>Angular a nivel básico</sub>
-
-</div>
+<p align="center">
+  <img src="assets/stack-es.svg" width="100%" alt="Stack: HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Angular (básico), PHP, Laravel, Java, MySQL, PostgreSQL, Oracle SQL, Git, GitHub, Docker"/>
+</p>
 
 <br/>
 
@@ -194,28 +123,9 @@ const andreu = {
 <!-- ====================== 05 · IDIOMAS ====================== -->
 <img src="assets/sections/es-05.svg" width="100%" alt="05 — Idiomas"/>
 
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <br/>
-      <b>Español</b><br/><br/>
-      <img src="https://img.shields.io/badge/Nativo-10b981?style=for-the-badge" alt="Español: nativo"/>
-      <br/><br/>
-    </td>
-    <td align="center" width="33%">
-      <br/>
-      <b>Català</b><br/><br/>
-      <img src="https://img.shields.io/badge/Nativo-10b981?style=for-the-badge" alt="Catalán: nativo"/>
-      <br/><br/>
-    </td>
-    <td align="center" width="33%">
-      <br/>
-      <b>English</b><br/><br/>
-      <img src="https://img.shields.io/badge/B2_·_C1_EF_SET-10b981?style=for-the-badge" alt="Inglés: B2 EOI, C1 EF SET"/>
-      <br/><br/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="assets/languages-es.svg" width="100%" alt="Idiomas: español nativo, catalán nativo, inglés B2 (EOI) y C1 (EF SET)"/>
+</p>
 
 <br/>
 

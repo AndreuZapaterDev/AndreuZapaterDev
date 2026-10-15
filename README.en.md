@@ -59,89 +59,18 @@ const andreu = {
 <!-- ====================== 02 · EXPERIENCE ====================== -->
 <img src="assets/sections/en-02.svg" width="100%" alt="02 — Experience"/>
 
-<table>
-  <tr>
-    <td width="30%" align="center" valign="top">
-      <br/>
-      <img src="https://img.shields.io/badge/●_Present-84cc16?style=for-the-badge" alt="Present"/>
-    </td>
-    <td valign="top">
-      <h3>Head of Digital</h3>
-      <b>OK24Horas</b> · Grupo RODI<br/><br/>
-      Leading the company's digital area: project coordination, digital strategy and
-      oversight of technical development.
-      <br/><br/>
-      <img src="https://img.shields.io/badge/Internal_promotion-0a0f0a?style=flat-square" alt="Internal promotion"/>
-      <img src="https://img.shields.io/badge/ASP.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="ASP.NET"/>
-      <b>→</b>
-      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
-      <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel"/>
-      <br/><br/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <br/>
-      <img src="https://img.shields.io/badge/2_years-4d7c0f?style=for-the-badge" alt="2 years"/>
-    </td>
-    <td valign="top">
-      <h3>Full Stack Developer</h3>
-      <b>OK24Horas</b> · Grupo RODI<br/><br/>
-      End-to-end web application development, from user interface to database.
-      <br/><br/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <br/>
-      <img src="https://img.shields.io/badge/Education-3f3f46?style=for-the-badge" alt="Education"/>
-    </td>
-    <td valign="top">
-      <h3>Web Application Development (DAW)</h3>
-      Higher Vocational Training Degree (Spain)
-      <br/><br/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="assets/timeline-en.svg" width="100%" alt="Experience: Head of Digital at OK24Horas (present, internal promotion, ASP.NET to React + Laravel migration); Full Stack Developer at OK24Horas (2 years); Web Application Development degree"/>
+</p>
 
 <br/>
 
 <!-- ====================== 03 · STACK ====================== -->
 <img src="assets/sections/en-03.svg" width="100%" alt="03 — Tech stack"/>
 
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center" width="50%" valign="top">
-      <img src="https://img.shields.io/badge/FRONTEND-4ade80?style=for-the-badge" alt="Frontend"/><br/><br/>
-      <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,angular&perline=4&theme=dark" alt="HTML, CSS, JavaScript, TypeScript, React, Tailwind, Angular"/>
-      <br/><br/>
-    </td>
-    <td align="center" width="50%" valign="top">
-      <img src="https://img.shields.io/badge/BACKEND-4ade80?style=for-the-badge" alt="Backend"/><br/><br/>
-      <img src="https://skillicons.dev/icons?i=php,laravel,java&perline=4&theme=dark" alt="PHP, Laravel, Java"/>
-      <br/><br/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" valign="top">
-      <img src="https://img.shields.io/badge/DATABASES-4ade80?style=for-the-badge" alt="Databases"/><br/><br/>
-      <img src="https://skillicons.dev/icons?i=mysql,postgres&theme=dark" alt="MySQL, PostgreSQL"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="48" alt="Oracle SQL"/>
-      <br/><br/>
-    </td>
-    <td align="center" valign="top">
-      <img src="https://img.shields.io/badge/DEVOPS_&_TOOLS-4ade80?style=for-the-badge" alt="DevOps and tools"/><br/><br/>
-      <img src="https://skillicons.dev/icons?i=git,github,docker&theme=dark" alt="Git, GitHub, Docker"/>
-      <br/><br/>
-    </td>
-  </tr>
-</table>
-
-<sub>Angular at a basic level</sub>
-
-</div>
+<p align="center">
+  <img src="assets/stack-en.svg" width="100%" alt="Stack: HTML5, CSS3, JavaScript, TypeScript, React, Tailwind CSS, Angular (basic), PHP, Laravel, Java, MySQL, PostgreSQL, Oracle SQL, Git, GitHub, Docker"/>
+</p>
 
 <br/>
 
@@ -176,28 +105,9 @@ const andreu = {
 <!-- ====================== 05 · LANGUAGES ====================== -->
 <img src="assets/sections/en-05.svg" width="100%" alt="05 — Languages"/>
 
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <br/>
-      <b>Spanish</b><br/><br/>
-      <img src="https://img.shields.io/badge/Native-10b981?style=for-the-badge" alt="Spanish: native"/>
-      <br/><br/>
-    </td>
-    <td align="center" width="33%">
-      <br/>
-      <b>Catalan</b><br/><br/>
-      <img src="https://img.shields.io/badge/Native-10b981?style=for-the-badge" alt="Catalan: native"/>
-      <br/><br/>
-    </td>
-    <td align="center" width="33%">
-      <br/>
-      <b>English</b><br/><br/>
-      <img src="https://img.shields.io/badge/B2_·_C1_EF_SET-10b981?style=for-the-badge" alt="English: B2 EOI, C1 EF SET"/>
-      <br/><br/>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="assets/languages-en.svg" width="100%" alt="Languages: Spanish native, Catalan native, English B2 (EOI) and C1 (EF SET)"/>
+</p>
 
 <br/>
 
