@@ -57,20 +57,6 @@
 <img src="assets/sections/en-04.svg" width="100%" alt="04 — Featured projects"/>
 
 <p align="center">
-  <a href="https://www.xixauxas.es"><img src="assets/xixauxas-preview.png" width="100%" alt="Screenshot of xixauxas.es"/></a>
-</p>
-
-<p align="center">
-  <img src="assets/project-xixauxas-en.svg" width="100%" alt="Xixauxas: live personal project built with React. Web platform for a League of Legends streamer and coach to manage and promote coaching sessions. Features: coaching booking, bilingual ES/EN site, videos and social media."/>
-</p>
-
-<p align="center">
-  <a href="https://www.xixauxas.es"><img src="assets/btn-visit-en.svg" height="46" alt="Visit xixauxas.es"/></a>
-</p>
-
-<br/>
-
-<p align="center">
   <a href="https://zensu.vercel.app"><img src="assets/zensu-preview.png" width="100%" alt="Screenshot of zensu.vercel.app"/></a>
 </p>
 
@@ -80,6 +66,20 @@
 
 <p align="center">
   <a href="https://zensu.vercel.app"><img src="assets/btn-visit-zensu-en.svg" height="46" alt="Visit zensu.vercel.app"/></a>
+</p>
+
+<br/>
+
+<p align="center">
+  <a href="https://www.xixauxas.es"><img src="assets/xixauxas-preview.png" width="100%" alt="Screenshot of xixauxas.es"/></a>
+</p>
+
+<p align="center">
+  <img src="assets/project-xixauxas-en.svg" width="100%" alt="Xixauxas: live personal project built with React. Web platform for a League of Legends streamer and coach to manage and promote coaching sessions. Features: coaching booking, bilingual ES/EN site, videos and social media."/>
+</p>
+
+<p align="center">
+  <a href="https://www.xixauxas.es"><img src="assets/btn-visit-en.svg" height="46" alt="Visit xixauxas.es"/></a>
 </p>
 
 <br/>

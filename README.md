@@ -76,20 +76,6 @@
 <img src="assets/sections/es-04.svg" width="100%" alt="04 — Proyectos destacados"/>
 
 <p align="center">
-  <a href="https://www.xixauxas.es"><img src="assets/xixauxas-preview.png" width="100%" alt="Captura de la web xixauxas.es"/></a>
-</p>
-
-<p align="center">
-  <img src="assets/project-xixauxas-es.svg" width="100%" alt="Xixauxas: proyecto personal en producción desarrollado con React. Plataforma web para un streamer y coach de League of Legends para gestionar y promocionar sus sesiones de coaching. Funcionalidades: reserva de coachings, web bilingüe ES/EN, vídeos y redes sociales."/>
-</p>
-
-<p align="center">
-  <a href="https://www.xixauxas.es"><img src="assets/btn-visit-es.svg" height="46" alt="Visitar xixauxas.es"/></a>
-</p>
-
-<br/>
-
-<p align="center">
   <a href="https://zensu.vercel.app"><img src="assets/zensu-preview.png" width="100%" alt="Captura de la web zensu.vercel.app"/></a>
 </p>
 
@@ -99,6 +85,20 @@
 
 <p align="center">
   <a href="https://zensu.vercel.app"><img src="assets/btn-visit-zensu-es.svg" height="46" alt="Visitar zensu.vercel.app"/></a>
+</p>
+
+<br/>
+
+<p align="center">
+  <a href="https://www.xixauxas.es"><img src="assets/xixauxas-preview.png" width="100%" alt="Captura de la web xixauxas.es"/></a>
+</p>
+
+<p align="center">
+  <img src="assets/project-xixauxas-es.svg" width="100%" alt="Xixauxas: proyecto personal en producción desarrollado con React. Plataforma web para un streamer y coach de League of Legends para gestionar y promocionar sus sesiones de coaching. Funcionalidades: reserva de coachings, web bilingüe ES/EN, vídeos y redes sociales."/>
+</p>
+
+<p align="center">
+  <a href="https://www.xixauxas.es"><img src="assets/btn-visit-es.svg" height="46" alt="Visitar xixauxas.es"/></a>
 </p>
 
 <br/>
