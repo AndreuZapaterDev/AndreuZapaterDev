@@ -1,3 +1,16 @@
+<!--
+  Paleta por sección
+  ─────────────────────────────────────────
+  Cabecera / Pie ....... verde lima   #84cc16
+  01 Sobre mí .......... lima         #84cc16
+  02 Stack ............. cian         #06b6d4
+  03 Proyectos ......... violeta      #8b5cf6
+  04 Idiomas ........... ámbar        #f59e0b
+  05 Certificaciones ... rosa         #ec4899
+  06 Actividad ......... esmeralda    #10b981
+  Fondo oscuro común ... #0a0f0a
+-->
+
 <!-- ====================== CABECERA ====================== -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a0f0a,50:166534,100:84cc16&height=200&section=header&text=Andreu%20Zapater%20Fillat&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=58&descSize=18" alt="Andreu Zapater Fillat" width="100%"/>
@@ -19,25 +32,25 @@
 
 <br/>
 
-<!-- ====================== SOBRE MÍ ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:65a30d&height=46&text=%E2%80%BA%20Sobre%20m%C3%AD&fontSize=20&fontColor=ffffff&fontAlign=10&fontAlignY=55" width="100%" alt="Sobre mí"/>
+<!-- ====================== 01 · SOBRE MÍ (lima) ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:84cc16&height=56&text=01%20%E2%80%94%20Sobre%20m%C3%AD&fontSize=22&fontColor=ffffff&fontAlign=13&fontAlignY=55" width="100%" alt="01 — Sobre mí"/>
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <p>
-        Desarrollador <b>Full Stack</b> con <b>3 años de experiencia</b> creando aplicaciones web
-        de principio a fin: desde la interfaz hasta la base de datos.
-      </p>
-      <p>
-        🏢 &nbsp;Lidero el <b>Departamento Digital</b> de <b>OK24Horas</b> · Grupo RODI<br/>
-        🎓 &nbsp;Graduado en <b>Desarrollo de Aplicaciones Web</b><br/>
-        ⚡ &nbsp;Foco en <b>React</b>, <b>TypeScript</b> y <b>Laravel</b><br/>
-        🌍 &nbsp;Español · Catalán · Inglés<br/>
-        📫 &nbsp;<a href="mailto:andreuzapaterdev@gmail.com">andreuzapaterdev@gmail.com</a>
-      </p>
+    <td width="55%" valign="top">
+      <br/>
+      Desarrollador <b>Full Stack</b> con <b>3 años de experiencia</b> diseñando y construyendo
+      aplicaciones web de extremo a extremo: interfaz, lógica de negocio y base de datos.
+      <br/><br/>
+      Actualmente lidero el <b>Departamento Digital de OK24Horas</b> (Grupo RODI), donde
+      combino el desarrollo técnico con la gestión de proyectos y la estrategia digital.
+      <br/><br/>
+      <img src="https://img.shields.io/badge/Experiencia-3_años-84cc16?style=flat-square&labelColor=0a0f0a"/>
+      <img src="https://img.shields.io/badge/Rol-Head_of_Digital-84cc16?style=flat-square&labelColor=0a0f0a"/>
+      <img src="https://img.shields.io/badge/Formación-DAW-84cc16?style=flat-square&labelColor=0a0f0a"/>
+      <br/><br/>
     </td>
-    <td width="50%" valign="top">
+    <td width="45%" valign="top">
 
 ```ts
 const andreu: Developer = {
@@ -55,33 +68,61 @@ const andreu: Developer = {
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td align="center" width="33%" valign="top">
+      <h3>🎨</h3>
+      <b>Frontend</b><br/>
+      <sub>Interfaces modernas y responsive con React, TypeScript y Tailwind</sub>
+    </td>
+    <td align="center" width="33%" valign="top">
+      <h3>⚙️</h3>
+      <b>Backend</b><br/>
+      <sub>APIs y lógica de negocio con PHP y Laravel sobre SQL</sub>
+    </td>
+    <td align="center" width="33%" valign="top">
+      <h3>🧭</h3>
+      <b>Liderazgo</b><br/>
+      <sub>Dirección del área digital y coordinación de proyectos</sub>
+    </td>
+  </tr>
+</table>
+
 <br/>
 
-<!-- ====================== STACK ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:65a30d&height=46&text=%E2%80%BA%20Stack%20tecnol%C3%B3gico&fontSize=20&fontColor=ffffff&fontAlign=14&fontAlignY=55" width="100%" alt="Stack tecnológico"/>
+<!-- ====================== 02 · STACK (cian) ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:06b6d4&height=56&text=02%20%E2%80%94%20Stack%20tecnol%C3%B3gico&fontSize=22&fontColor=ffffff&fontAlign=18&fontAlignY=55" width="100%" alt="02 — Stack tecnológico"/>
 
 <div align="center">
 
 <table>
   <tr>
-    <td align="center" width="25%"><sub><b>FRONTEND</b></sub></td>
-    <td align="center" width="25%"><sub><b>BACKEND</b></sub></td>
-    <td align="center" width="25%"><sub><b>BASES DE DATOS</b></sub></td>
-    <td align="center" width="25%"><sub><b>DEVOPS & TOOLS</b></sub></td>
+    <td align="center" width="25%"><img src="https://img.shields.io/badge/FRONTEND-06b6d4?style=for-the-badge"/></td>
+    <td align="center" width="25%"><img src="https://img.shields.io/badge/BACKEND-06b6d4?style=for-the-badge"/></td>
+    <td align="center" width="25%"><img src="https://img.shields.io/badge/BASES_DE_DATOS-06b6d4?style=for-the-badge"/></td>
+    <td align="center" width="25%"><img src="https://img.shields.io/badge/DEVOPS_&_TOOLS-06b6d4?style=for-the-badge"/></td>
   </tr>
   <tr>
     <td align="center" valign="top">
-      <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,angular&perline=4" alt="Frontend"/>
+      <br/>
+      <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,angular&perline=4&theme=dark" alt="Frontend"/>
+      <br/><br/>
     </td>
     <td align="center" valign="top">
-      <img src="https://skillicons.dev/icons?i=php,laravel,java,matlab&perline=2" alt="Backend"/>
+      <br/>
+      <img src="https://skillicons.dev/icons?i=php,laravel,java,matlab&perline=2&theme=dark" alt="Backend"/>
+      <br/><br/>
     </td>
     <td align="center" valign="top">
-      <img src="https://skillicons.dev/icons?i=mysql,postgres&perline=2" alt="MySQL y PostgreSQL"/><br/>
+      <br/>
+      <img src="https://skillicons.dev/icons?i=mysql,postgres&perline=2&theme=dark" alt="MySQL y PostgreSQL"/><br/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="48" alt="Oracle SQL"/>
+      <br/><br/>
     </td>
     <td align="center" valign="top">
-      <img src="https://skillicons.dev/icons?i=git,github,docker&perline=2" alt="DevOps"/>
+      <br/>
+      <img src="https://skillicons.dev/icons?i=git,github,docker&perline=2&theme=dark" alt="DevOps"/>
+      <br/><br/>
     </td>
   </tr>
 </table>
@@ -92,114 +133,117 @@ const andreu: Developer = {
 
 <br/>
 
-<!-- ====================== PROYECTOS ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:65a30d&height=46&text=%E2%80%BA%20Proyectos%20destacados&fontSize=20&fontColor=ffffff&fontAlign=16&fontAlignY=55" width="100%" alt="Proyectos destacados"/>
+<!-- ====================== 03 · PROYECTOS (violeta) ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:8b5cf6&height=56&text=03%20%E2%80%94%20Proyectos%20destacados&fontSize=22&fontColor=ffffff&fontAlign=20&fontAlignY=55" width="100%" alt="03 — Proyectos destacados"/>
 
 <table>
   <tr>
     <td>
       <a href="https://www.xixauxas.es">
-        <img src="https://capsule-render.vercel.app/api?type=venom&color=0:166534,100:84cc16&height=130&text=Xixauxas&fontSize=42&fontColor=ffffff&animation=fadeIn&desc=League%20of%20Legends%20Coaching&descSize=16&descAlignY=72" width="100%" alt="Xixauxas"/>
+        <img src="https://capsule-render.vercel.app/api?type=venom&color=0:2e1065,100:8b5cf6&height=140&text=Xixauxas&fontSize=44&fontColor=ffffff&animation=fadeIn&desc=League%20of%20Legends%20Coaching%20Platform&descSize=15&descAlignY=72" width="100%" alt="Xixauxas"/>
       </a>
-      <p>
-        Plataforma web para un <b>streamer y coach de League of Legends</b> que le permite
-        <b>gestionar y promocionar sus sesiones de coaching</b> entre su comunidad de seguidores.
-      </p>
-      <p>
-        <img src="https://img.shields.io/badge/Web-0a0f0a?style=flat-square"/>
-        <img src="https://img.shields.io/badge/Gaming-0a0f0a?style=flat-square"/>
-        <img src="https://img.shields.io/badge/Coaching-0a0f0a?style=flat-square"/>
-        &nbsp;&nbsp;
-        <a href="https://www.xixauxas.es"><img src="https://img.shields.io/badge/Visitar_web_→-65a30d?style=flat-square&logo=googlechrome&logoColor=white" alt="Visitar web"/></a>
-      </p>
+      <br/>
+      Plataforma web para un <b>streamer y coach de League of Legends</b> que le permite
+      <b>gestionar y promocionar sus sesiones de coaching</b> entre su comunidad de seguidores.
+      <br/><br/>
+      <img src="https://img.shields.io/badge/Web-8b5cf6?style=flat-square&labelColor=0a0f0a"/>
+      <img src="https://img.shields.io/badge/Gaming-8b5cf6?style=flat-square&labelColor=0a0f0a"/>
+      <img src="https://img.shields.io/badge/Coaching-8b5cf6?style=flat-square&labelColor=0a0f0a"/>
+      <img src="https://img.shields.io/badge/Estado-En_producción-8b5cf6?style=flat-square&labelColor=0a0f0a"/>
+      <br/><br/>
+      <a href="https://www.xixauxas.es"><img src="https://img.shields.io/badge/Visitar_web_→-8b5cf6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Visitar web"/></a>
+      <br/><br/>
     </td>
   </tr>
 </table>
 
 <br/>
 
-<!-- ====================== IDIOMAS ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:65a30d&height=46&text=%E2%80%BA%20Idiomas&fontSize=20&fontColor=ffffff&fontAlign=8&fontAlignY=55" width="100%" alt="Idiomas"/>
+<!-- ====================== 04 · IDIOMAS (ámbar) ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:f59e0b&height=56&text=04%20%E2%80%94%20Idiomas&fontSize=22&fontColor=ffffff&fontAlign=11&fontAlignY=55" width="100%" alt="04 — Idiomas"/>
 
 <table>
   <tr>
     <td align="center" width="33%">
-      <h4>🇪🇸 Español</h4>
-      <code>▰▰▰▰▰</code><br/>
-      <sub>Nativo</sub>
+      <br/>
+      <b>Español</b><br/><br/>
+      <img src="https://img.shields.io/badge/Nativo-f59e0b?style=for-the-badge"/><br/>
+      <sub>▰▰▰▰▰</sub>
     </td>
     <td align="center" width="33%">
-      <h4>Català</h4>
-      <code>▰▰▰▰▰</code><br/>
-      <sub>Nativo</sub>
+      <br/>
+      <b>Català</b><br/><br/>
+      <img src="https://img.shields.io/badge/Nativo-f59e0b?style=for-the-badge"/><br/>
+      <sub>▰▰▰▰▰</sub>
     </td>
     <td align="center" width="33%">
-      <h4>🇬🇧 English</h4>
-      <code>▰▰▰▰▱</code><br/>
-      <sub>B2 · EOI &nbsp;|&nbsp; C1 · EF SET</sub>
+      <br/>
+      <b>English</b><br/><br/>
+      <img src="https://img.shields.io/badge/B2_·_C1_EF_SET-f59e0b?style=for-the-badge"/><br/>
+      <sub>▰▰▰▰▱</sub>
     </td>
   </tr>
 </table>
 
 <br/>
 
-<!-- ====================== CERTIFICACIONES ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:65a30d&height=46&text=%E2%80%BA%20Certificaciones&fontSize=20&fontColor=ffffff&fontAlign=13&fontAlignY=55" width="100%" alt="Certificaciones"/>
+<!-- ====================== 05 · CERTIFICACIONES (rosa) ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:ec4899&height=56&text=05%20%E2%80%94%20Certificaciones&fontSize=22&fontColor=ffffff&fontAlign=16&fontAlignY=55" width="100%" alt="05 — Certificaciones"/>
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/EF_SET-0a0f0a?style=flat-square"/><br/>
-      <b>Inglés C1</b><br/>
-      <a href="https://cert.efset.org/YjF4mA"><sub>Ver credencial →</sub></a>
+      <img src="https://img.shields.io/badge/EF_SET-ec4899?style=flat-square"/>
+      <h4>Inglés C1</h4>
+      <a href="https://cert.efset.org/YjF4mA"><img src="https://img.shields.io/badge/Ver_credencial_→-0a0f0a?style=flat-square"/></a>
     </td>
     <td width="50%" valign="top">
-      <img src="https://img.shields.io/badge/Escuela_Oficial_de_Idiomas-0a0f0a?style=flat-square"/><br/>
-      <b>Inglés B2</b><br/>
-      <sub>Certificado oficial</sub>
+      <img src="https://img.shields.io/badge/Escuela_Oficial_de_Idiomas-ec4899?style=flat-square"/>
+      <h4>Inglés B2</h4>
+      <img src="https://img.shields.io/badge/Certificado_oficial-0a0f0a?style=flat-square"/>
     </td>
   </tr>
   <tr>
     <td valign="top">
-      <img src="https://img.shields.io/badge/Google_Skillshop-0a0f0a?style=flat-square&logo=google&logoColor=white"/><br/>
-      <b>Competencias digitales para profesionales</b><br/>
-      <a href="https://skillshop.exceedlms.com/student/award/885R6WYRgqz8ZjDSTvqTJ22e"><sub>Ver credencial →</sub></a>
+      <img src="https://img.shields.io/badge/Google_Skillshop-ec4899?style=flat-square&logo=google&logoColor=white"/>
+      <h4>Competencias digitales para profesionales</h4>
+      <a href="https://skillshop.exceedlms.com/student/award/885R6WYRgqz8ZjDSTvqTJ22e"><img src="https://img.shields.io/badge/Ver_credencial_→-0a0f0a?style=flat-square"/></a>
     </td>
     <td valign="top">
-      <img src="https://img.shields.io/badge/Google_Skillshop-0a0f0a?style=flat-square&logo=google&logoColor=white"/><br/>
-      <b>Productividad personal</b><br/>
-      <a href="https://skillshop.exceedlms.com/student/award/466kx7XcQm9GaTJmx551tLEr"><sub>Ver credencial →</sub></a>
+      <img src="https://img.shields.io/badge/Google_Skillshop-ec4899?style=flat-square&logo=google&logoColor=white"/>
+      <h4>Productividad personal</h4>
+      <a href="https://skillshop.exceedlms.com/student/award/466kx7XcQm9GaTJmx551tLEr"><img src="https://img.shields.io/badge/Ver_credencial_→-0a0f0a?style=flat-square"/></a>
     </td>
   </tr>
   <tr>
     <td valign="top">
-      <img src="https://img.shields.io/badge/Google_Skillshop-0a0f0a?style=flat-square&logo=google&logoColor=white"/><br/>
-      <b>Introducción al desarrollo web: HTML y CSS (1/2)</b><br/>
-      <a href="https://skillshop.exceedlms.com/student/award/JyNpgpNz1V2sxGqbp1dhiYys"><sub>Ver credencial →</sub></a>
+      <img src="https://img.shields.io/badge/Google_Skillshop-ec4899?style=flat-square&logo=google&logoColor=white"/>
+      <h4>Introducción al desarrollo web: HTML y CSS (1/2)</h4>
+      <a href="https://skillshop.exceedlms.com/student/award/JyNpgpNz1V2sxGqbp1dhiYys"><img src="https://img.shields.io/badge/Ver_credencial_→-0a0f0a?style=flat-square"/></a>
     </td>
     <td valign="top">
-      <img src="https://img.shields.io/badge/Google_Skillshop-0a0f0a?style=flat-square&logo=google&logoColor=white"/><br/>
-      <b>Introducción al desarrollo web: HTML y CSS (2/2)</b><br/>
-      <a href="https://skillshop.exceedlms.com/student/award/SDWE51yRTBmXGwGrntJnsRad"><sub>Ver credencial →</sub></a>
+      <img src="https://img.shields.io/badge/Google_Skillshop-ec4899?style=flat-square&logo=google&logoColor=white"/>
+      <h4>Introducción al desarrollo web: HTML y CSS (2/2)</h4>
+      <a href="https://skillshop.exceedlms.com/student/award/SDWE51yRTBmXGwGrntJnsRad"><img src="https://img.shields.io/badge/Ver_credencial_→-0a0f0a?style=flat-square"/></a>
     </td>
   </tr>
 </table>
 
 <br/>
 
-<!-- ====================== ESTADÍSTICAS ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:65a30d&height=46&text=%E2%80%BA%20Actividad%20en%20GitHub&fontSize=20&fontColor=ffffff&fontAlign=15&fontAlignY=55" width="100%" alt="Actividad en GitHub"/>
+<!-- ====================== 06 · ACTIVIDAD (esmeralda) ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:10b981&height=56&text=06%20%E2%80%94%20Actividad%20en%20GitHub&fontSize=22&fontColor=ffffff&fontAlign=19&fontAlignY=55" width="100%" alt="06 — Actividad en GitHub"/>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AndreuZapaterDev&show_icons=true&hide_border=true&bg_color=0a0f0a&title_color=a3e635&icon_color=65a30d&text_color=d4d4d4&rank_icon=github" alt="GitHub stats" height="170"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreuZapaterDev&layout=compact&hide_border=true&bg_color=0a0f0a&title_color=a3e635&text_color=d4d4d4" alt="Lenguajes más usados" height="170"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=AndreuZapaterDev&show_icons=true&hide_border=true&bg_color=0a0f0a&title_color=10b981&icon_color=34d399&text_color=d4d4d4&rank_icon=github" alt="GitHub stats" height="170"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AndreuZapaterDev&layout=compact&hide_border=true&bg_color=0a0f0a&title_color=10b981&text_color=d4d4d4" alt="Lenguajes más usados" height="170"/>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=AndreuZapaterDev&hide_border=true&background=0a0f0a&ring=65a30d&fire=a3e635&currStreakLabel=a3e635&sideLabels=d4d4d4&currStreakNum=ffffff&sideNums=ffffff&dates=a3a3a3&locale=es" alt="Racha de contribuciones"/>
+  <img src="https://streak-stats.demolab.com?user=AndreuZapaterDev&hide_border=true&background=0a0f0a&ring=10b981&fire=34d399&currStreakLabel=34d399&sideLabels=d4d4d4&currStreakNum=ffffff&sideNums=ffffff&dates=a3a3a3&stroke=1f2937&locale=es" alt="Racha de contribuciones"/>
 </p>
 
 <!-- ====================== PIE ====================== -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:84cc16,50:166534,100:0a0f0a&height=120&section=footer" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:84cc16,50:166534,100:0a0f0a&height=120&section=footer&text=Gracias%20por%20pasarte&fontSize=18&fontColor=ffffff&fontAlignY=72" width="100%" alt="Pie"/>
 </p>
