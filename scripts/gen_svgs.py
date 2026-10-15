@@ -41,6 +41,8 @@ def write(path, content):
 # ---------------------------------------------------------------- secciones
 def section(num, icon, color, title):
     t = escape(title)
+    # Cada barra empieza el haz en un punto distinto para que no vayan sincronizadas
+    offset = -1.3 * int(num)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="72" viewBox="0 0 1200 72" role="img" aria-label="{num} — {t}">
   <defs>
     <linearGradient id="g" x1="0" x2="1">
@@ -54,6 +56,15 @@ def section(num, icon, color, title):
   </defs>
   <rect x=".5" y=".5" width="1199" height="71" rx="14" fill="{BG}" stroke="{color}" stroke-opacity=".35"/>
   <rect x=".5" y=".5" width="1199" height="71" rx="14" fill="url(#g)"/>
+  <filter id="bg" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+  <g fill="none" stroke-linecap="round">
+    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="{color}" stroke-width="5" stroke-opacity=".7" stroke-dasharray="80 920" filter="url(#bg)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="8s" begin="{offset}s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="#ffffff" stroke-opacity=".8" stroke-width="1.5" stroke-dasharray="80 920">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="8s" begin="{offset}s" repeatCount="indefinite"/>
+    </rect>
+  </g>
   <rect x="18" y="16" width="40" height="40" rx="10" fill="{color}" fill-opacity=".14" stroke="{color}" stroke-opacity=".4"/>
   <g transform="translate(26 24)" fill="none" stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{ICONS[icon]}</g>
   <text x="76" y="44" font-family="{MONO}" font-size="16" font-weight="600" fill="{color}">{num}</text>
@@ -81,32 +92,47 @@ CHAR_W = 9.0  # ancho aproximado de un carácter monoespaciado a 15px
 def header(role, terminal_title, lines, chips):
     # lines: lista de (tipo, texto) con tipo "cmd" | "out" | "hi"
     tx, ty0, lh = 700, 128, 30
-    parts, t = [], 0.6
-    for i, (kind, text) in enumerate(lines):
-        y = ty0 + i * lh
-        cid = f"c{i}"
+    # 1) Calcular cuándo empieza y acaba de escribirse cada línea
+    t, timed = 0.6, []
+    for kind, text in lines:
         if kind == "cmd":
             full = (len(text) + 2) * CHAR_W + 4
             dur = max(0.5, len(text) * 0.06)
-            content = (f'<tspan fill="{LIME}">$</tspan> '
-                       f'<tspan fill="#f5f5f5">{escape(text)}</tspan>')
         else:
             full = len(text) * CHAR_W + 20
             dur = 0.01
+        timed.append((kind, text, full, t, t + dur))
+        t += dur + (0.35 if kind == "cmd" else 0.25)
+    typed_end = t
+    cycle = typed_end + 7  # tiempo con todo escrito antes de "limpiar" y repetir
+
+    # 2) Pintar las líneas: todas las animaciones comparten el mismo ciclo en bucle
+    parts = []
+    for i, (kind, text, full, start, end) in enumerate(timed):
+        y = ty0 + i * lh
+        if kind == "cmd":
+            content = (f'<tspan fill="{LIME}">$</tspan> '
+                       f'<tspan fill="#f5f5f5">{escape(text)}</tspan>')
+        else:
             col = LIME if kind == "hi" else "#a3a3a3"
             content = f'<tspan fill="{col}">{escape(text)}</tspan>'
+        k1, k2 = start / cycle, end / cycle
         parts.append(
-            f'<clipPath id="{cid}"><rect x="{tx}" y="{y - 18}" width="0" height="26">'
-            f'<animate attributeName="width" from="0" to="{full:.0f}" begin="{t:.2f}s" dur="{dur:.2f}s" fill="freeze"/>'
+            f'<clipPath id="c{i}"><rect x="{tx}" y="{y - 18}" width="0" height="26">'
+            f'<animate attributeName="width" values="0;0;{full:.0f};{full:.0f}" keyTimes="0;{k1:.4f};{k2:.4f};1" '
+            f'dur="{cycle:.2f}s" repeatCount="indefinite"/>'
             f'</rect></clipPath>'
-            f'<text x="{tx}" y="{y}" clip-path="url(#{cid})" font-family="{MONO}" font-size="15">{content}</text>'
+            f'<text x="{tx}" y="{y}" clip-path="url(#c{i})" font-family="{MONO}" font-size="15">{content}</text>'
         )
-        t += dur + (0.35 if kind == "cmd" else 0.25)
-        last_y, last_w = y, full
+        # El cursor va justo detrás del último carácter (≈8.3 px por carácter a 15 px)
+        last_y, last_w = y, len(text) * 8.3 + (18 if kind == "cmd" else 0)
+    # Cursor: aparece al terminar de escribir (en cada ciclo) y parpadea
     cursor = (
-        f'<rect x="{tx + last_w + 4:.0f}" y="{last_y - 14}" width="9" height="18" fill="{LIME}" opacity="0">'
-        f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.01;.5;.51" dur="1.1s" begin="{t:.2f}s" repeatCount="indefinite"/>'
-        f'</rect>'
+        f'<g opacity="0"><animate attributeName="opacity" values="0;1" keyTimes="0;{typed_end / cycle:.4f}" '
+        f'calcMode="discrete" dur="{cycle:.2f}s" repeatCount="indefinite"/>'
+        f'<rect x="{tx + last_w + 4:.0f}" y="{last_y - 14}" width="9" height="18" fill="{LIME}">'
+        f'<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.51;1" dur="1.1s" repeatCount="indefinite"/>'
+        f'</rect></g>'
     )
 
     chip_svg, cx = [], 60
@@ -135,6 +161,15 @@ def header(role, terminal_title, lines, chips):
       <stop offset="0" stop-color="#d9f99d"/>
       <stop offset="1" stop-color="{LIME}"/>
     </linearGradient>
+    <!-- Destello que cruza "Fillat" cada 5 s -->
+    <linearGradient id="sheen" gradientUnits="userSpaceOnUse" x1="-260" y1="0" x2="-60" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#ffffff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="x1" values="-260;260;260" keyTimes="0;.5;1" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="-60;460;460" keyTimes="0;.5;1" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="beamglow" x="-5%" y="-20%" width="110%" height="140%"><feGaussianBlur stdDeviation="4"/></filter>
     <clipPath id="card"><rect width="1200" height="360" rx="20"/></clipPath>
   </defs>
 
@@ -147,6 +182,15 @@ def header(role, terminal_title, lines, chips):
     <rect width="1200" height="360" fill="url(#glow2)"/>
   </g>
   <rect x=".5" y=".5" width="1199" height="359" rx="20" fill="none" stroke="{LIME}" stroke-opacity=".25"/>
+  <!-- Haz de luz que recorre el borde sin parar -->
+  <g fill="none" stroke-linecap="round">
+    <rect x="1" y="1" width="1198" height="358" rx="20" pathLength="1000" stroke="{LIME}" stroke-width="6" stroke-opacity=".7" stroke-dasharray="90 910" filter="url(#beamglow)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1" y="1" width="1198" height="358" rx="20" pathLength="1000" stroke="#d9f99d" stroke-width="2" stroke-dasharray="90 910">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
   <!-- Columna izquierda -->
   <rect x="60" y="56" width="236" height="30" rx="15" fill="{LIME}" fill-opacity=".1" stroke="{LIME}" stroke-opacity=".5"/>
@@ -157,6 +201,7 @@ def header(role, terminal_title, lines, chips):
 
   <text x="58" y="160" font-family="{SANS}" font-size="58" font-weight="800" fill="#ffffff">Andreu Zapater</text>
   <text x="58" y="222" font-family="{SANS}" font-size="58" font-weight="800" fill="url(#name)">Fillat</text>
+  <text x="58" y="222" font-family="{SANS}" font-size="58" font-weight="800" fill="url(#sheen)">Fillat</text>
   <text x="60" y="262" font-family="{SANS}" font-size="18" fill="#a3a3a3">{escape(role)}</text>
   {"".join(chip_svg)}
 
@@ -387,6 +432,19 @@ def rich(line):
     return "".join(out)
 
 
+def count_up(x, y, n, color, delay=0.4, dur=3.2):
+    """Número que cuenta de 0 a n al cargar (frena al final). El SVG no puede animar
+    el texto en sí, así que se apilan los valores intermedios y se muestran por turnos."""
+    style = f'font-family="{SANS}" font-size="34" font-weight="800" fill="{color}"'
+    times = [delay + dur * (1 - (1 - k / n) ** (1 / 3)) for k in range(n + 1)] if n else [0]
+    out = []
+    for k in range(n + 1):
+        show = "" if k == 0 else f'<set attributeName="opacity" to="1" begin="{times[k]:.2f}s"/>'
+        hide = "" if k == n else f'<set attributeName="opacity" to="0" begin="{times[k + 1]:.2f}s"/>'
+        out.append(f'<text x="{x}" y="{y}" {style} opacity="{1 if k == 0 else 0}">{k}{show}{hide}</text>')
+    return "".join(out)
+
+
 def about_svg(paragraphs, stats, code, now_label, now_text, label):
     color = "#a3e635"
     H = 430
@@ -406,8 +464,8 @@ def about_svg(paragraphs, stats, code, now_label, now_text, label):
     for num, lab in stats:
         out.append(
             f'<rect x="{sx}" y="262" width="170" height="78" rx="12" fill="#111811" stroke="#ffffff" stroke-opacity=".07"/>'
-            f'<text x="{sx + 18}" y="304" font-family="{SANS}" font-size="34" font-weight="800" fill="{color}">{escape(num)}</text>'
-            f'<text x="{sx + 18}" y="326" font-family="{SANS}" font-size="13" fill="#a3a3a3">{escape(lab)}</text>')
+            + count_up(sx + 18, 304, int(num), color)
+            + f'<text x="{sx + 18}" y="326" font-family="{SANS}" font-size="13" fill="#a3a3a3">{escape(lab)}</text>')
         sx += 184
     # Editor
     ex, ey, ew, eh = 640, 40, 520, 300
