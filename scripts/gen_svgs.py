@@ -227,16 +227,22 @@ write("header-en.svg", header(
 
 # ---------------------------------------------------------------- pie
 def footer(text):
+    # Continúa el degradado de la página: 07 Actividad (#0d9488) → cian (#06b6d4), el último color
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110" role="img" aria-label="{escape(text)}">
   <defs>
     <linearGradient id="line" x1="0" x2="1">
-      <stop offset="0" stop-color="{LIME}" stop-opacity="0"/>
-      <stop offset=".5" stop-color="{LIME}"/>
-      <stop offset="1" stop-color="{LIME}" stop-opacity="0"/>
+      <stop offset="0" stop-color="#0d9488" stop-opacity="0"/>
+      <stop offset=".35" stop-color="#0d9488"/>
+      <stop offset=".65" stop-color="#06b6d4"/>
+      <stop offset="1" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="txt" gradientUnits="userSpaceOnUse" x1="490" x2="710">
+      <stop offset="0" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#0891b2"/>
     </linearGradient>
   </defs>
   <rect x="150" y="20" width="900" height="2" fill="url(#line)"/>
-  <text x="600" y="64" text-anchor="middle" font-family="{SANS}" font-size="20" font-weight="700" fill="#65a30d">{escape(text)}</text>
+  <text x="600" y="64" text-anchor="middle" font-family="{SANS}" font-size="20" font-weight="700" fill="url(#txt)">{escape(text)}</text>
   <text x="600" y="92" text-anchor="middle" font-family="{MONO}" font-size="13" fill="#737373">andreuzapaterdev@gmail.com</text>
 </svg>
 '''
@@ -687,15 +693,37 @@ for lang, (parts, line2) in TAGLINES.items():
 MAIL_ICON = '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>'
 
 
+def text_width(text, size, bold=True):
+    """Ancho aproximado de un texto en una fuente sans-serif (em por carácter)."""
+    em = 0
+    for ch in text:
+        if ch in "iljtf.,:;!|'I":
+            em += .30
+        elif ch in "r ":
+            em += .38
+        elif ch in "mwMW@":
+            em += .86
+        elif ch.isupper():
+            em += .64
+        elif ch.isdigit():
+            em += .56
+        else:
+            em += .54
+    return em * size * (1.04 if bold else 1)
+
+
 def button_svg(text, icon_svg, primary, color=LIME):
-    w = 64 + len(text) * 8.6 + 28
+    pad, icon, gap = 26, 24, 12
+    tw = text_width(text, 16)
+    w = pad + icon + gap + tw + pad
     fill = color if primary else BG
     fg = BG if primary else "#f5f5f5"
     stroke = "" if primary else f' stroke="{color}" stroke-opacity=".55"'
+    # textLength fija el ancho del texto: los márgenes izquierdo y derecho quedan iguales con cualquier fuente
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w:.0f}" height="52" viewBox="0 0 {w:.0f} 52" role="img" aria-label="{escape(text)}">
   <rect x=".75" y=".75" width="{w - 1.5:.1f}" height="50.5" rx="25.25" fill="{fill}"{stroke}/>
-  <g transform="translate(26 14)">{icon_svg(BG if primary else color)}</g>
-  <text x="60" y="32" font-family="{SANS}" font-size="16" font-weight="700" fill="{fg}">{escape(text)}</text>
+  <g transform="translate({pad} 14)">{icon_svg(BG if primary else color)}</g>
+  <text x="{pad + icon + gap}" y="32" textLength="{tw:.1f}" lengthAdjust="spacing" font-family="{SANS}" font-size="16" font-weight="700" fill="{fg}">{escape(text)}</text>
 </svg>
 '''
 

@@ -1,7 +1,7 @@
 <!--
   Paleta por sección (degradado lima → verde azulado)
   ─────────────────────────────────────────
-  Cabecera / Pie ....... #84cc16
+  Cabecera ............. #84cc16
   01 Sobre mí .......... #a3e635
   02 Trayectoria ....... #84cc16
   03 Stack ............. #4ade80
@@ -9,6 +9,7 @@
   05 Idiomas ........... #10b981
   06 Certificaciones ... #14b8a6
   07 Actividad ......... #0d9488
+  Pie .................. #0d9488 → #06b6d4 (cian, cierra el degradado)
   Fondo oscuro común ... #0a0f0a
 
   Los SVG de assets/ (cabecera, barras, trayectoria, stack, idiomas y pie) son propios.
