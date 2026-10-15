@@ -210,7 +210,7 @@ def header(role, terminal_title, lines, chips):
 write("header-es.svg", header(
     "Jefe del Departamento Digital · OK24Horas",
     "andreu@ok24horas: ~",
-    [("cmd", "whoami"), ("out", "andreu — jefe del departamento digital"),
+    [("cmd", "whoami"), ("out", "Andreu - Full Stack Developer"),
      ("cmd", "cat stack.txt"), ("out", "React · Laravel · TypeScript · Docker"),
      ("cmd", "git checkout -b migracion"), ("hi", "ASP.NET → React + Laravel")],
     ["React", "Laravel", "TypeScript"],
@@ -218,7 +218,7 @@ write("header-es.svg", header(
 write("header-en.svg", header(
     "Head of Digital · OK24Horas",
     "andreu@ok24horas: ~",
-    [("cmd", "whoami"), ("out", "andreu — head of digital"),
+    [("cmd", "whoami"), ("out", "Andreu - Full Stack Developer"),
      ("cmd", "cat stack.txt"), ("out", "React · Laravel · TypeScript · Docker"),
      ("cmd", "git checkout -b migration"), ("hi", "ASP.NET → React + Laravel")],
     ["React", "Laravel", "TypeScript"],
