@@ -26,7 +26,7 @@
 
 <p align="center">
   <a href="https://github.com/AndreuZapaterDev">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3500&pause=800&color=65a30d&center=true&vCenter=true&width=600&lines=Jefe+del+Departamento+Digital+%40+OK24Horas;Full+Stack+Developer+%7C+React+%C2%B7+Laravel+%C2%B7+TypeScript;3+a%C3%B1os+construyendo+productos+web" alt="Jefe del Departamento Digital en OK24Horas · Full Stack Developer"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3500&pause=800&color=65a30d&center=true&vCenter=true&width=600&lines=Jefe+del+Departamento+Digital+%40+OK24Horas;Full+Stack+Developer+%7C+React+%C2%B7+Laravel+%C2%B7+TypeScript;3+a%C3%B1os+construyendo+productos+web;Migrando+ASP.NET+%E2%86%92+React+%2B+Laravel" alt="Jefe del Departamento Digital en OK24Horas · Full Stack Developer"/>
   </a>
 </p>
 
@@ -85,6 +85,13 @@ const andreu = {
       <b>OK24Horas</b> · Grupo RODI<br/><br/>
       Dirección del área digital de la compañía: coordinación de proyectos, definición de
       la estrategia digital y supervisión del desarrollo técnico.
+      <br/><br/>
+      🔭 <b>Ahora mismo:</b> migrando una aplicación web de <b>ASP.NET</b> a <b>React + Laravel</b>.
+      <br/><br/>
+      <img src="https://img.shields.io/badge/ASP.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt="ASP.NET"/>
+      <b>→</b>
+      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React"/>
+      <img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel"/>
       <br/><br/>
       <img src="https://img.shields.io/badge/Promoción_interna-0a0f0a?style=flat-square&logo=rocket&logoColor=84cc16" alt="Promoción interna"/>
       <br/><br/>
