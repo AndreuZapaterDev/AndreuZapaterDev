@@ -42,7 +42,7 @@ def write(path, content):
 def section(num, icon, color, title):
     t = escape(title)
     # Cada barra empieza el haz en un punto distinto para que no vayan sincronizadas
-    offset = -1.3 * int(num)
+    offset = -2 * int(num)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="72" viewBox="0 0 1200 72" role="img" aria-label="{num} — {t}">
   <defs>
     <linearGradient id="g" x1="0" x2="1">
@@ -56,13 +56,13 @@ def section(num, icon, color, title):
   </defs>
   <rect x=".5" y=".5" width="1199" height="71" rx="14" fill="{BG}" stroke="{color}" stroke-opacity=".35"/>
   <rect x=".5" y=".5" width="1199" height="71" rx="14" fill="url(#g)"/>
-  <filter id="bg" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="bg" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="2"/></filter>
   <g fill="none" stroke-linecap="round">
-    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="{color}" stroke-width="5" stroke-opacity=".7" stroke-dasharray="80 920" filter="url(#bg)">
-      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="8s" begin="{offset}s" repeatCount="indefinite"/>
+    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="{color}" stroke-width="3" stroke-opacity=".35" stroke-dasharray="45 955" filter="url(#bg)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="14s" begin="{offset}s" repeatCount="indefinite"/>
     </rect>
-    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="#ffffff" stroke-opacity=".8" stroke-width="1.5" stroke-dasharray="80 920">
-      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="8s" begin="{offset}s" repeatCount="indefinite"/>
+    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="{color}" stroke-opacity=".75" stroke-width="1" stroke-dasharray="45 955">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="14s" begin="{offset}s" repeatCount="indefinite"/>
     </rect>
   </g>
   <rect x="18" y="16" width="40" height="40" rx="10" fill="{color}" fill-opacity=".14" stroke="{color}" stroke-opacity=".4"/>

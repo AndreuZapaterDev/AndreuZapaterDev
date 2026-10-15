@@ -11,13 +11,13 @@
   </defs>
   <rect x=".5" y=".5" width="1199" height="71" rx="14" fill="#0a0f0a" stroke="#a3e635" stroke-opacity=".35"/>
   <rect x=".5" y=".5" width="1199" height="71" rx="14" fill="url(#g)"/>
-  <filter id="bg" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="bg" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="2"/></filter>
   <g fill="none" stroke-linecap="round">
-    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="#a3e635" stroke-width="5" stroke-opacity=".7" stroke-dasharray="80 920" filter="url(#bg)">
-      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="8s" begin="-1.3s" repeatCount="indefinite"/>
+    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="#a3e635" stroke-width="3" stroke-opacity=".35" stroke-dasharray="45 955" filter="url(#bg)">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="14s" begin="-2s" repeatCount="indefinite"/>
     </rect>
-    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="#ffffff" stroke-opacity=".8" stroke-width="1.5" stroke-dasharray="80 920">
-      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="8s" begin="-1.3s" repeatCount="indefinite"/>
+    <rect x="1" y="1" width="1198" height="70" rx="14" pathLength="1000" stroke="#a3e635" stroke-opacity=".75" stroke-width="1" stroke-dasharray="45 955">
+      <animate attributeName="stroke-dashoffset" from="0" to="-1000" dur="14s" begin="-2s" repeatCount="indefinite"/>
     </rect>
   </g>
   <rect x="18" y="16" width="40" height="40" rx="10" fill="#a3e635" fill-opacity=".14" stroke="#a3e635" stroke-opacity=".4"/>
