@@ -18,13 +18,13 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Estadísticas 3D de contribuciones
-        uses: yoshi389111/github-profile-3d-contrib@latest
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
       - name: Serpiente de contribuciones
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk/svg-only@v3.5.0
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
@@ -35,7 +35,7 @@ jobs:
         run: cp profile-3d-contrib/*.svg dist/
 
       - name: Publicar en la rama output
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@v4.2.0
         with:
           target_branch: output
           build_dir: dist

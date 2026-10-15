@@ -38,22 +38,15 @@
       I currently lead the <b>Digital Department at OK24Horas</b> (Grupo RODI), combining
       hands-on development with project management and digital strategy.
       <br/><br/>
-      <img src="https://img.shields.io/badge/Experience-3_years-a3e635?style=flat-square&labelColor=0a0f0a" alt="Experience: 3 years"/>
-      <img src="https://img.shields.io/badge/Role-Head_of_Digital-a3e635?style=flat-square&labelColor=0a0f0a" alt="Role: Head of Digital"/>
-      <img src="https://img.shields.io/badge/Education-Web_App_Development-a3e635?style=flat-square&labelColor=0a0f0a" alt="Education: Web Application Development"/>
-      <br/><br/>
     </td>
     <td width="45%" valign="top">
 
 ```ts
-const andreu: Developer = {
-  role: "Full Stack Developer",
-  position: "Head of Digital",
-  company: "OK24Horas · Grupo RODI",
-  experience: "3 years",
-  education: "Web Application Development",
-  stack: ["React", "TypeScript", "Laravel"],
-  languages: ["es", "ca", "en"],
+const andreu = {
+  frontend: ["React", "TypeScript", "Tailwind"],
+  backend:  ["PHP", "Laravel"],
+  data:     ["MySQL", "PostgreSQL"],
+  focus:    "end-to-end web products",
 };
 ```
 
@@ -61,55 +54,81 @@ const andreu: Developer = {
   </tr>
 </table>
 
+<br/>
+
+<!-- ====================== 02 · EXPERIENCE ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:84cc16&height=56&text=02%20%E2%80%94%20Experience&fontSize=22&fontColor=ffffff&fontAlign=14&fontAlignY=55" width="100%" alt="02 — Experience"/>
+
 <table>
   <tr>
-    <td align="center" width="33%" valign="top">
-      <h3>🎨</h3>
-      <b>Frontend</b><br/>
-      <sub>Modern, responsive interfaces with React, TypeScript and Tailwind</sub>
+    <td width="30%" align="center" valign="top">
+      <br/>
+      <img src="https://img.shields.io/badge/●_Present-84cc16?style=for-the-badge" alt="Present"/>
     </td>
-    <td align="center" width="33%" valign="top">
-      <h3>⚙️</h3>
-      <b>Backend</b><br/>
-      <sub>APIs and business logic with PHP and Laravel on SQL</sub>
+    <td valign="top">
+      <h3>Head of Digital</h3>
+      <b>OK24Horas</b> · Grupo RODI<br/><br/>
+      Leading the company's digital area: project coordination, digital strategy and
+      oversight of technical development.
+      <br/><br/>
+      <img src="https://img.shields.io/badge/Internal_promotion-0a0f0a?style=flat-square&logo=rocket&logoColor=84cc16" alt="Internal promotion"/>
+      <br/><br/>
     </td>
-    <td align="center" width="33%" valign="top">
-      <h3>🧭</h3>
-      <b>Leadership</b><br/>
-      <sub>Leading the digital area and coordinating projects</sub>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+      <br/>
+      <img src="https://img.shields.io/badge/2_years-4d7c0f?style=for-the-badge" alt="2 years"/>
+    </td>
+    <td valign="top">
+      <h3>Full Stack Developer</h3>
+      <b>OK24Horas</b> · Grupo RODI<br/><br/>
+      End-to-end web application development, from user interface to database.
+      <br/><br/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top">
+      <br/>
+      <img src="https://img.shields.io/badge/Education-3f3f46?style=for-the-badge" alt="Education"/>
+    </td>
+    <td valign="top">
+      <h3>Web Application Development (DAW)</h3>
+      Higher Vocational Training Degree (Spain)
+      <br/><br/>
     </td>
   </tr>
 </table>
 
 <br/>
 
-<!-- ====================== 02 · STACK ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:84cc16&height=56&text=02%20%E2%80%94%20Tech%20stack&fontSize=22&fontColor=ffffff&fontAlign=14&fontAlignY=55" width="100%" alt="02 — Tech stack"/>
+<!-- ====================== 03 · STACK ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:4ade80&height=56&text=03%20%E2%80%94%20Tech%20stack&fontSize=22&fontColor=ffffff&fontAlign=14&fontAlignY=55" width="100%" alt="03 — Tech stack"/>
 
 <div align="center">
 
 <table>
   <tr>
     <td align="center" width="50%" valign="top">
-      <img src="https://img.shields.io/badge/FRONTEND-84cc16?style=for-the-badge" alt="Frontend"/><br/><br/>
+      <img src="https://img.shields.io/badge/FRONTEND-4ade80?style=for-the-badge" alt="Frontend"/><br/><br/>
       <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,angular&perline=4&theme=dark" alt="HTML, CSS, JavaScript, TypeScript, React, Tailwind, Angular"/>
       <br/><br/>
     </td>
     <td align="center" width="50%" valign="top">
-      <img src="https://img.shields.io/badge/BACKEND-84cc16?style=for-the-badge" alt="Backend"/><br/><br/>
+      <img src="https://img.shields.io/badge/BACKEND-4ade80?style=for-the-badge" alt="Backend"/><br/><br/>
       <img src="https://skillicons.dev/icons?i=php,laravel,java,matlab&perline=4&theme=dark" alt="PHP, Laravel, Java, MATLAB"/>
       <br/><br/>
     </td>
   </tr>
   <tr>
     <td align="center" valign="top">
-      <img src="https://img.shields.io/badge/DATABASES-84cc16?style=for-the-badge" alt="Databases"/><br/><br/>
+      <img src="https://img.shields.io/badge/DATABASES-4ade80?style=for-the-badge" alt="Databases"/><br/><br/>
       <img src="https://skillicons.dev/icons?i=mysql,postgres&theme=dark" alt="MySQL, PostgreSQL"/>
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" width="48" alt="Oracle SQL"/>
       <br/><br/>
     </td>
     <td align="center" valign="top">
-      <img src="https://img.shields.io/badge/DEVOPS_&_TOOLS-84cc16?style=for-the-badge" alt="DevOps and tools"/><br/><br/>
+      <img src="https://img.shields.io/badge/DEVOPS_&_TOOLS-4ade80?style=for-the-badge" alt="DevOps and tools"/><br/><br/>
       <img src="https://skillicons.dev/icons?i=git,github,docker&theme=dark" alt="Git, GitHub, Docker"/>
       <br/><br/>
     </td>
@@ -122,8 +141,8 @@ const andreu: Developer = {
 
 <br/>
 
-<!-- ====================== 03 · PROJECTS ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:22c55e&height=56&text=03%20%E2%80%94%20Featured%20projects&fontSize=22&fontColor=ffffff&fontAlign=18&fontAlignY=55" width="100%" alt="03 — Featured projects"/>
+<!-- ====================== 04 · PROJECTS ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:22c55e&height=56&text=04%20%E2%80%94%20Featured%20projects&fontSize=22&fontColor=ffffff&fontAlign=18&fontAlignY=55" width="100%" alt="04 — Featured projects"/>
 
 <table>
   <tr>
@@ -148,8 +167,8 @@ const andreu: Developer = {
 
 <br/>
 
-<!-- ====================== 04 · LANGUAGES ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:10b981&height=56&text=04%20%E2%80%94%20Languages&fontSize=22&fontColor=ffffff&fontAlign=13&fontAlignY=55" width="100%" alt="04 — Languages"/>
+<!-- ====================== 05 · LANGUAGES ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:10b981&height=56&text=05%20%E2%80%94%20Languages&fontSize=22&fontColor=ffffff&fontAlign=13&fontAlignY=55" width="100%" alt="05 — Languages"/>
 
 <table>
   <tr>
@@ -176,8 +195,8 @@ const andreu: Developer = {
 
 <br/>
 
-<!-- ====================== 05 · CERTIFICATIONS ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:14b8a6&height=56&text=05%20%E2%80%94%20Certifications&fontSize=22&fontColor=ffffff&fontAlign=16&fontAlignY=55" width="100%" alt="05 — Certifications"/>
+<!-- ====================== 06 · CERTIFICATIONS ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:14b8a6&height=56&text=06%20%E2%80%94%20Certifications&fontSize=22&fontColor=ffffff&fontAlign=16&fontAlignY=55" width="100%" alt="06 — Certifications"/>
 
 <table>
   <tr>
@@ -192,8 +211,15 @@ const andreu: Developer = {
       <img src="https://img.shields.io/badge/Official_certificate-0a0f0a?style=flat-square" alt="Official certificate"/>
     </td>
   </tr>
+</table>
+
+<details>
+<summary><b>Show more certifications (4)</b></summary>
+<br/>
+
+<table>
   <tr>
-    <td valign="top">
+    <td width="50%" valign="top">
       <img src="https://img.shields.io/badge/Google_Skillshop-14b8a6?style=flat-square&logo=google&logoColor=white" alt="Google Skillshop"/>
       <h4>Digital skills for professionals</h4>
       <a href="https://skillshop.exceedlms.com/student/award/885R6WYRgqz8ZjDSTvqTJ22e"><img src="https://img.shields.io/badge/View_credential_→-0a0f0a?style=flat-square" alt="View credential"/></a>
@@ -218,10 +244,12 @@ const andreu: Developer = {
   </tr>
 </table>
 
+</details>
+
 <br/>
 
-<!-- ====================== 06 · ACTIVITY ====================== -->
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:0d9488&height=56&text=06%20%E2%80%94%20GitHub%20activity&fontSize=22&fontColor=ffffff&fontAlign=17&fontAlignY=55" width="100%" alt="06 — GitHub activity"/>
+<!-- ====================== 07 · ACTIVITY ====================== -->
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0a0f0a,100:0d9488&height=56&text=07%20%E2%80%94%20GitHub%20activity&fontSize=22&fontColor=ffffff&fontAlign=17&fontAlignY=55" width="100%" alt="07 — GitHub activity"/>
 
 <p align="center">
   <picture>
