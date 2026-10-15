@@ -26,16 +26,19 @@
 
 <p align="center">
   <a href="https://github.com/AndreuZapaterDev">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3500&pause=800&color=65a30d&center=true&vCenter=true&width=600&lines=Jefe+del+Departamento+Digital+%40+OK24Horas;Full+Stack+Developer+%7C+React+%C2%B7+Laravel+%C2%B7+TypeScript;3+a%C3%B1os+construyendo+productos+web;Migrando+ASP.NET+%E2%86%92+React+%2B+Laravel" alt="Jefe del Departamento Digital en OK24Horas · Full Stack Developer"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3500&pause=800&color=65a30d&center=true&vCenter=true&width=600&lines=Jefe+del+Departamento+Digital+%40+OK24Horas;Full+Stack+Developer+%7C+React+%C2%B7+Laravel+%C2%B7+TypeScript;Migrando+ASP.NET+%E2%86%92+React+%2B+Laravel" alt="Jefe del Departamento Digital en OK24Horas · Full Stack Developer"/>
   </a>
 </p>
 
 <p align="center">
-  <a href="mailto:andreuzapaterdev@gmail.com"><img src="https://img.shields.io/badge/Gmail-andreuzapaterdev-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email: andreuzapaterdev@gmail.com"/></a>
+  <b>Construyo y modernizo aplicaciones web de negocio con React y Laravel,</b><br/>
+  y lidero el área digital de OK24Horas.
+</p>
+
+<p align="center">
+  <a href="mailto:andreuzapaterdev@gmail.com"><img src="https://img.shields.io/badge/Email-andreuzapaterdev-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email: andreuzapaterdev@gmail.com"/></a>
   <!-- Sustituye TU-USUARIO por tu perfil de LinkedIn -->
   <a href="https://www.linkedin.com/in/TU-USUARIO/"><img src="https://img.shields.io/badge/LinkedIn-Andreu%20Zapater-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://www.xixauxas.es"><img src="https://img.shields.io/badge/Portfolio-xixauxas.es-0a0f0a?style=flat-square&logo=googlechrome&logoColor=white" alt="Proyecto: xixauxas.es"/></a>
-  <img src="https://komarev.com/ghpvc/?username=AndreuZapaterDev&style=flat-square&color=65a30d&label=Visitas" alt="Contador de visitas"/>
 </p>
 
 <br/>
@@ -139,7 +142,7 @@ const andreu = {
     </td>
     <td align="center" width="50%" valign="top">
       <img src="https://img.shields.io/badge/BACKEND-4ade80?style=for-the-badge" alt="Backend"/><br/><br/>
-      <img src="https://skillicons.dev/icons?i=php,laravel,java,matlab&perline=4&theme=dark" alt="PHP, Laravel, Java, MATLAB"/>
+      <img src="https://skillicons.dev/icons?i=php,laravel,java&perline=4&theme=dark" alt="PHP, Laravel, Java"/>
       <br/><br/>
     </td>
   </tr>
@@ -158,7 +161,7 @@ const andreu = {
   </tr>
 </table>
 
-<sub>Angular y MATLAB a nivel básico</sub>
+<sub>Angular a nivel básico</sub>
 
 </div>
 
@@ -278,13 +281,6 @@ const andreu = {
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AndreuZapaterDev/AndreuZapaterDev/output/profile-night-green.svg"/>
     <img src="https://raw.githubusercontent.com/AndreuZapaterDev/AndreuZapaterDev/output/profile-green-animate.svg" alt="Contribuciones en 3D, lenguajes y estadísticas de GitHub" width="100%"/>
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AndreuZapaterDev/AndreuZapaterDev/output/github-snake-dark.svg"/>
-    <img src="https://raw.githubusercontent.com/AndreuZapaterDev/AndreuZapaterDev/output/github-snake.svg" alt="Serpiente comiéndose el gráfico de contribuciones" width="100%"/>
   </picture>
 </p>
 

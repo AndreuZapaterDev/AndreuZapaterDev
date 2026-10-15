@@ -1,4 +1,4 @@
-# Genera las imágenes dinámicas del perfil (estadísticas 3D y serpiente de contribuciones)
+# Genera las imágenes dinámicas del perfil (estadísticas 3D de contribuciones)
 # y las publica en la rama `output`, para no depender de servicios externos ni ensuciar `main`.
 name: Profile assets
 
@@ -23,16 +23,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Serpiente de contribuciones
-        uses: Platane/snk/svg-only@v3.5.0
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg?color_snake=65a30d
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=84cc16
-
       - name: Reunir archivos
-        run: cp profile-3d-contrib/*.svg dist/
+        run: mkdir -p dist && cp profile-3d-contrib/*.svg dist/
 
       - name: Publicar en la rama output
         uses: crazy-max/ghaction-github-pages@v4.2.0
